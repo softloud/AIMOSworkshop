@@ -1,0 +1,166 @@
+---
+title: "Let's start at the very beginning"
+subtitle: "A very good place to start"
+author: Jen Richmond
+institution: R-Ladies Sydney
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "my-theme.css", "my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      highlightStyle: dracula
+      highlightLanguage: ["r", "yaml", "markdown"]
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+params:
+  site_link: "https://do-re-mi.netlify.com/"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+episode_counter <- 0
+knitr::opts_chunk$set(
+  collapse = TRUE,   
+  comment = "#>"
+)
+```
+
+```{r packages, include=FALSE}
+library(countdown)
+library(ymlthis)
+```
+
+
+class: title-slide, center, middle
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"></i>
+  <strong class="fa-stack-1x" style="color:#e7553c;">`r rmarkdown::metadata$session`</strong>
+</span> 
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author` &#183; `r rmarkdown::metadata$institution`
+
+#### [`r params$site_link`](`r params$site_link`)
+
+---
+layout: true
+
+<div class="my-footer"><span>`r params$site_link`</span></div>
+
+---
+
+# The Plan
+
+1. Why R?
+
+2. Navigating RStudio
+
+3. Getting your data in
+
+4. Cleaning it up
+
+5. Make a ggplot
+
+
+--
+
+
+You will need a laptop and wifi, but we will use RStudio Cloud, so don't worry about installation.
+
+---
+
+## Who are we?
+
+Jen Richmond
+- Developmental psychologist UNSW
+- Co-founder R-Ladies Sydney
+- R beginner :purple heart: 
+
+Charles Gray
+- 
+- 
+- 
+
+Danielle Navarro
+- 
+- 
+- 
+
+---
+
+# Warning
+
+Google is every R user's best friend, even Hadley Wickham. 
+
+https://twitter.com/hadleywickham/status/757919786344984577?lang=en
+
+Today we are really unlikely to know the answers to all your questions, but we can help you google!
+
+https://twitter.com/ResearcHersCode/status/1184483102615191553
+
+---
+
+class: center, middle, inverse
+ 
+# 1. Why R?
+
+Talk to your neighbour, why do you want to learn R?
+
+```{r echo=FALSE}
+countdown(minutes = 2, seconds = 00)
+```
+ 
+---
+  
+# Why I R...
+
+
+### One stop shop 
+
+
+### Inclusivity 
+
+
+### Reproducibility
+
+
+### Community
+
+
+### Fun!  
+ 
+---
+
+class: center, middle, inverse
+
+# 2.  Navigating RStudio
+
+---
+
+class: center, middle, inverse
+
+# 3. Getting data in
+
+---
+
+class: center, middle, inverse
+
+# 4. Cleaning it up
+
+---
+
+class: center, middle, inverse
+
+# 5. Make a ggplot
+
+---
+
+
