@@ -1,0 +1,30 @@
+---
+title: "hackathon-cheatsheet"
+description: |
+  Let's start at the very beginning...
+author:
+  - name: Jen Richmond
+    url: https://example.com/norajones
+    affiliation: UNSW Sydney
+    affiliation_url: http://jenrichmond.rbind.io/post/
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Develop a beginner friendly cheatsheet for R learners
+
+RStudio cheatsheets (https://rstudio.com/resources/cheatsheets/) are a great resource for R users. They provide a 1 page reference guide that summarises the main functions in a particular package and how to use them. But they are not very beginner friendly. Cheatsheets assume you have a solid grasp of how to refer to data, variables and parameters in R and can generalise from a sparse template to your own situation. They often only become useful when you already know how to use a package. In this hackathon, we will work together to create a “Getting started with the Tidyverse” cheatsheet, a resource designed specifically for R beginners. 
+
+We welcome an interest in contributing to at least one of the following, or proposing another working category: 
+
+- Visual design of the cheatsheet; 
+- Pedagogical values and objectives; 
+- Technical implementation in .Rmd;
+- Write-up of manuscript that describes and publishes the cheatsheet.
+
+Advanced knowledge of R is not required; merely an interest in the kind of problems you would like to use R to solve. Attendees of the associated workshop, Let’s start at the very beginning, are warmly invited to bring insights from their recent introduction to R, as there will be obstacles and smooth points in the learning process that are not as immediately apparent to those who have been using R for several years.  
+
+https://rstudio.com/resources/cheatsheets/how-to-contribute-a-cheatsheet/

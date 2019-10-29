@@ -1,0 +1,37 @@
+---
+title: "babynames"
+author: "Jen Richmond"
+date: "28/10/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# load libraries
+```{r}
+library(tidyverse)
+library(ozbabynames)
+```
+
+# get data
+
+
+
+```{r}
+SAbabies <- ozbabynames::ozbabynames %>%
+  filter(state == "South Australia") %>%
+  write_csv("SAbabynames.csv")
+```
+
+```{r}
+SAbabies %>%
+  filter(name %in% c("Jenny", "Charles")) %>%
+  group_by(name) %>%
+  ggplot(aes(x = year, y = count, colour = name)) +
+  geom_line() +
+  theme_classic() +
+  labs(title= "Number of babies born in SA", y = "Number of babies", x = "Year")
+```
+
