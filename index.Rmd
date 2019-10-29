@@ -1,0 +1,21 @@
+---
+title: "R-Ladies AIMOS"
+description: |
+  Let's start at the very beginning...
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+Lots of researchers who are interested in open science, replication, and reproducibility use R. But how did they learn it? Research methods courses are most often not taught in R.  If you are not terribly familiar with coding in general, teaching yourself how to code in R is a big task, and doing it by yourself is lonely and frustrating. 
+
+If you have been thinking of trying R but been scared of "writing code", this session is for you. Join folks from R-Ladies and start your journey towards reproducible analysis. You will learn how to find your way around RStudio, get your OWN data into R, clean it up a little, and generate some summary stats and plots. 
