@@ -31,7 +31,9 @@ knitr::opts_chunk$set(
 
 ```{r packages, include=FALSE}
 library(countdown)
-library(ymlthis)
+library(here)
+
+
 ```
 
 
@@ -77,34 +79,36 @@ You will need a laptop and wifi, but we will use RStudio Cloud, so don't worry a
 
 ---
 
-## Who are we?
 
-Jen Richmond
-- Developmental psychologist UNSW
-- Co-founder R-Ladies Sydney
-- R beginner :purple heart: 
-
-Charles Gray
-- 
-- 
-- 
-
-Danielle Navarro
-- 
-- 
-- 
 
 ---
 
-# Warning
+class: center, middle
 
-Google is every R user's best friend, even Hadley Wickham. 
+# Disclaimer
 
-https://twitter.com/hadleywickham/status/757919786344984577?lang=en
+.pull-left[
 
-Today we are really unlikely to know the answers to all your questions, but we can help you google!
+#### Today we are really unlikely to know the answers to all your questions, but we can help you google!
 
-https://twitter.com/ResearcHersCode/status/1184483102615191553
+#### Google is every R user's best friend, even Hadley Wickham. 
+
+
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/google_hadley.png")
+```
+
+]
+
+.pull-right[
+
+
+```{r echo=FALSE, out.width= "600px"}
+knitr::include_graphics("img/google_ResearcHers.png")
+```
+
+]
+
 
 ---
 
@@ -117,31 +121,122 @@ Talk to your neighbour, why do you want to learn R?
 ```{r echo=FALSE}
 countdown(minutes = 2, seconds = 00)
 ```
- 
+
 ---
+
+
   
 # Why I R...
 
-
+.pull-left[
 ### One stop shop 
 
 
-### Inclusivity 
+### [Equity](https://rfortherestofus.com/2019/07/equity/)
 
 
-### Reproducibility
+
+### [Reproducibility](https://www.nature.com/articles/s41559-017-0160)
 
 
-### Community
+
+### [Community](https://qz.com/work/1661486/r-ladies-made-data-science-inclusive/)
+
 
 
 ### Fun!  
  
+]
+
+.pull-right[
+
+
+```{r echo=FALSE, out.width= "1000px"}
+knitr::include_graphics("img/stats.jpeg")
+```
+
+Image credit Darren Dahly @statsepi
+
+]
+
+---
+
+class: center
+
+# Warning: You will want to quit
+
+```{r echo=FALSE, out.width= "600px"}
+knitr::include_graphics("img/pit.jpg")
+```
+
+---
+
+class: center
+
+```{r echo=FALSE, out.width= "800px"}
+knitr::include_graphics("img/mountain.png")
+```
+
+
+Image credit Dani Navarro [Workflow](https://slides.com/djnavarro/workflow#/)
+
+---
+
+class: center
+
+```{r echo=FALSE, out.width= "1000px"}
+knitr::include_graphics("img/climb.png")
+```
+
+Image credit Dani Navarro [Workflow](https://slides.com/djnavarro/workflow#/)
+
 ---
 
 class: center, middle, inverse
 
 # 2.  Navigating RStudio
+
+insert link to RStudio Cloud session here
+
+---
+
+class: center
+
+# Think of R-Studio as your kitchen
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/studio.jpg")
+```
+
+Image credit to Jessica Ward from @RLadiesNCL
+
+---
+
+# Let's start by redecorating
+
+.pull-left[
+From the top menu choose
+- Tools
+- Global Options
+- Appearance
+
+Then try out a few Editor themes and choose one you like. 
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width= "600px"}
+knitr::include_graphics("img/redecorate.png")
+```
+
+
+
+```{r echo=FALSE}
+countdown(minutes = 4, seconds = 00)
+```
+
+
+]
 
 ---
 
