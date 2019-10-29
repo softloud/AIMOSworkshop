@@ -1,0 +1,22 @@
+name: "AIMOSworkshop"
+title: "rladiesAIMOS"
+description: |
+  Let's start at the very beginning...
+output_dir: "docs"
+navbar:
+  right:
+    - text: "home"
+      href: index.html
+    - text: "about"
+      href: about.html
+    - text: "workshop"
+      menu: 
+        - text: "info"
+          href: workshop-info.html
+        - text: "start here"
+          href: start-here.html
+        - text: "slides"
+          href: aimos/workshop-slides.html
+    - text: "hackathon"
+      href: hackathon-cheatsheet.html
+output: distill::distill_article
