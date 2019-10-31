@@ -1,0 +1,68 @@
+---
+title: "babynames"
+author: "Jen Richmond"
+date: "28/10/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# load libraries
+```{r}
+library(tidyverse)
+library(here)
+```
+
+# get data
+
+
+```{r}
+library(tidyverse)
+library(here)
+
+SAbabies <- read_csv(here("ozbaby", "data", "SAbabynames.csv"))
+
+
+## How popular is your name?
+
+SAbabies %>%
+  filter(name =="Jenny") %>%
+  ggplot(aes(x = year, y = count))+
+  geom_point(colour = "purple") +
+  geom_line(colour = "purple") +
+  theme_classic() +
+  labs(title= "Number of babies born in SA called Jenny", y = "Number of babies", x = "Year")
+
+```
+## How popular is your name relative to your neighbours?
+
+```{r eval = TRUE}
+
+SAbabies %>%
+  filter(name %in% c("Jenny", "Charles", "Charlotte", "Jack")) %>%
+  group_by(name) %>%
+  ggplot(aes(x = year, y = count, colour = name)) +
+  geom_point() +
+  geom_line() +
+  theme_classic() +
+  labs(title= "Number of babies born in SA called Jenny, Charles, Charlotte", y = "Number of babies", x = "Year")
+
+```
+### Has your name become more or less popular since your were born?
+
+```{r eval = TRUE}
+
+SAbabies %>%
+  filter(year > 1978) %>%
+  filter(name =="Jenny") %>%
+  ggplot(aes(x = year, y = count)) +
+ geom_point(colour = "purple") +
+  geom_line(colour = "purple") +
+  theme_classic() +
+  labs(title= "Number of babies called Jenny born in SA since 1978", y = "Number of babies", x = "Year") 
+
+
+```
+

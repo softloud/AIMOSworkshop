@@ -1,0 +1,17 @@
+---
+title: "About this site"
+description: |
+  Some additional details about the website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## aimos
+
+[Association for Interdiscipliary Meta-research & Open Science](https://www.aimos2019conference.com/)
+
+## r-ladies
+
+[R-Ladies](https://rladies.org/)
