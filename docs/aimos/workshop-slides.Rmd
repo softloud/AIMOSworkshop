@@ -2,7 +2,7 @@
 title: "Let's start at the very beginning"
 subtitle: "A very good place to start"
 author: Jen Richmond
-institution: R-Ladies Sydney
+institution: UNSW Psychology/R-Ladies Sydney
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
@@ -12,9 +12,9 @@ output:
     nature:
       highlightStyle: dracula
       highlightLanguage: ["r", "yaml", "markdown"]
-      slideNumberFormat: "" 
+      slideNumberFormat: "%current%" 
       highlightLines: true
-      countIncrementalSlides: false
+      countIncrementalSlides: true
       ratio: "16:9"
 params:
   site_link: "https://do-re-mi.netlify.com/"
@@ -32,7 +32,6 @@ knitr::opts_chunk$set(
 ```{r packages, include=FALSE}
 library(countdown)
 library(here)
-
 
 ```
 
@@ -59,26 +58,34 @@ layout: true
 
 ---
 
+.pull-left[
+
 # The Plan
 
 1. Why R?
 
 2. Navigating RStudio
 
-3. Getting your data in
+3. Getting data in
 
 4. Cleaning it up
 
 5. Make a ggplot
 
+<br>
 
---
+> You will need a laptop and access to wifi, but we will use RStudio Cloud, so don't worry about installation.
+
+]
 
 
-You will need a laptop and wifi, but we will use RStudio Cloud, so don't worry about installation.
+.pull-right[
 
----
+```{r echo=FALSE, out.width= "800px"}
+knitr::include_graphics("img/bblearning.jpg")
+```
 
+]
 
 
 ---
@@ -112,7 +119,7 @@ knitr::include_graphics("img/google_ResearcHers.png")
 
 ---
 
-class: center, middle, inverse
+class: center, middle
  
 # 1. Why R?
 
@@ -128,28 +135,22 @@ countdown(minutes = 2, seconds = 00)
   
 # Why I R...
 
-.pull-left[
-### One stop shop 
-
-
-### [Equity](https://rfortherestofus.com/2019/07/equity/)
-
-
+.left-column[ 
 
 ### [Reproducibility](https://www.nature.com/articles/s41559-017-0160)
 
+### [One stop shop](https://twitter.com/kara_woo/status/1100908125396193281) 
 
+### [Equity](https://rfortherestofus.com/2019/07/equity/)
 
 ### [Community](https://qz.com/work/1661486/r-ladies-made-data-science-inclusive/)
 
+### [Fun!](https://headrush.typepad.com/creating_passionate_users/2005/06/kicking_ass_is_.html) 
+
+] 
 
 
-### Fun!  
- 
-]
-
-.pull-right[
-
+.right-column[ 
 
 ```{r echo=FALSE, out.width= "1000px"}
 knitr::include_graphics("img/stats.jpeg")
@@ -158,6 +159,7 @@ knitr::include_graphics("img/stats.jpeg")
 Image credit Darren Dahly @statsepi
 
 ]
+
 
 ---
 
@@ -173,7 +175,7 @@ knitr::include_graphics("img/pit.jpg")
 
 class: center
 
-```{r echo=FALSE, out.width= "800px"}
+```{r echo=FALSE, out.width= "900px"}
 knitr::include_graphics("img/mountain.png")
 ```
 
@@ -184,7 +186,7 @@ Image credit Dani Navarro [Workflow](https://slides.com/djnavarro/workflow#/)
 
 class: center
 
-```{r echo=FALSE, out.width= "1000px"}
+```{r echo=FALSE, out.width= "900px"}
 knitr::include_graphics("img/climb.png")
 ```
 
@@ -192,11 +194,26 @@ Image credit Dani Navarro [Workflow](https://slides.com/djnavarro/workflow#/)
 
 ---
 
-class: center, middle, inverse
+class: center
 
-# 2.  Navigating RStudio
+```{r echo=FALSE, out.width= "900px"}
+knitr::include_graphics("img/team.png")
+```
+
+Image credit Dani Navarro [Workflow](https://slides.com/djnavarro/workflow#/)
+
+---
+
+class: center, middle
+
+# Navigating RStudio
 
 insert link to RStudio Cloud session here
+
+---
+
+Insert screenshot RStudio Cloud view
+
 
 ---
 
@@ -211,14 +228,17 @@ knitr::include_graphics("img/studio.jpg")
 Image credit to Jessica Ward from @RLadiesNCL
 
 ---
+class: inverse 
 
-# Let's start by redecorating
+# Your turn 1: Let's start by redecorating
 
 .pull-left[
 From the top menu choose
 - Tools
 - Global Options
 - Appearance
+
+<br>
 
 Then try out a few Editor themes and choose one you like. 
 ]
@@ -240,22 +260,443 @@ countdown(minutes = 4, seconds = 00)
 
 ---
 
-class: center, middle, inverse
+class: center
 
-# 3. Getting data in
+# What questions do you have ?
+
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/questions1.jpg")
+
+``` 
+
+
+---
+
+# Packages
+
+A package is a group functions that some kind person has written, tested, bundled together and given away for everyone to use. 
+
+<br>
+
+.pull-left[
+
+To install packages, type into your console. Just do this once. 
+
+<br>
+
+To use a package, load it using the `library()` function. You need to do this every time you want to use the functions in a package. 
+
+
+]
+
+.pull-right[
+
+```
+install.packages("packagename")
+
+```
+
+<br>
+
+```
+library(packagename)
+
+```
+
+]
 
 ---
 
-class: center, middle, inverse
+# What is the tidyverse?  
 
-# 4. Cleaning it up
+.pull-left[
+
+The tidyverse is a mega-package (i.e. a package of other packages) designed to make data wrangling and visualisation easier.  
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+is the same as...
+
+```{r message=FALSE, warning=FALSE}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(purrr)
+library(tibble)
+library(stringr)
+library(forcats)
+
+```
+
+
+
+] 
+
+.pull-right[
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/tidy_workflow.png")
+
+``` 
+
+] 
+
+It's a good idea to put `library(tidyverse)` at the top of every analysis document. You will probably need it. 
+---
+
+class: inverse 
+
+# Your turn 2: install some packages
+
+Step 1. In your console, install...
+
+- janitor
+- here
+- beepr
+- praise
+
+```{r eval = FALSE}
+install.packages("packagename")
+```
+
+Step 2. Then open the demo.Rmd file and add the following to the "code chunk" under `library(tidyverse)`. 
+
+```
+library(janitor) 
+library(here)
+library(beepr)
+library(praise)
+
+```
+Run the code in the chunk using the little green arrow on the right 
+
+```{r echo=FALSE}
+countdown(minutes = 4, seconds = 00)
+``` 
+
 
 ---
 
-class: center, middle, inverse
+class: center
 
-# 5. Make a ggplot
+# What questions do you have ?
+
+<br>
+<br>
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/questions2.jpg")
+
+``` 
 
 ---
+
+# An aside about RMarkdown
+
+.pull-left[
+
+RMarkdown documents (or .Rmd files) are key to reproducible analysis. 
+- notes/explanations + "chunks" of R code 
+- "knit" the document (notes + code + output) into a nice format that other people (who may not know R) can access. 
+
+### Tricks and tips
+
+- Insert a chunk using shortcut Alt-Cmd-I
+- Hash to get levels of heading
+- Asterisks to get bold and italics
+] 
+
+
+.pull-right[
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/rmarkdown_wizards.png")
+
+```
+
+Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustrations) @allison_horst from R-Ladies Santa Barbara
+] 
+
+ 
+---
+
+class: inverse
+
+# Your turn 3: "Knit" your RMarkdown document
+
+.pull-left[
+
+Change a few things about the text in the demo.Rmd doc
+
+- Change the title at the top
+- Add a few headings using #
+- Make words bold by putting them in double asterik
+
+Then choose "Knit" and check out the output. 
+] 
+
+.pull-right[
+
+<iframe src="https://giphy.com/embed/26BRIVreINK0mQdW0" width="480" height="352" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wind-hat-gnome-26BRIVreINK0mQdW0">via GIPHY</a></p>
+
+] 
+
+<br>
+
+```{r echo=FALSE}
+countdown(minutes = 2, seconds = 00)
+```
+
+
+---
+class: center
+
+# What questions do you have ?
+
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/questions6.jpg")
+
+``` 
+
+---
+
+class: center, middle
+
+# Getting data in
+
+---
+
+# Where is the data?
+
+.pull-left[
+
+The `here` package will help avoid file path drama. You can use it to tell R where you data is, relative to the top level of your project folder. 
+
+```{r echo=FALSE, out.width= "400px"}
+knitr::include_graphics("img/here.png")
+```
+ 
+] 
+
+.pull-right[
+
+We can use the `read_csv()` from `readr` and `here()` to read a .csv file. 
+
+#### Template code
+
+```
+df <- read_csv(here("data", "file.csv"))
+
+```
+<br>
+
+> BTW you can read .xls, .sav, .sas, .stata, but you will need to install the `readxl` or `haven` packages.
+
+<br>
+
+Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustrations) @allison_horst from @RLadiesSB
+
+] 
+
+
+
+
+---
+
+class: inverse
+
+# Your turn 4: Read in and play around with the babynames data
+
+- Step 1: Make a new chunk (Cmd-Option-I)
+
+- Step 2: Copy the template code
+
+```
+df <- read_csv(here("data", "file.csv"))
+
+```
+
+- Step 3: Adapt the template to match the babynames data 
+
+- Step 4: Play with the code in each chunk to plot...
+
+   - How popular is your name?
+   - How popular is your name relative to your neighbours?
+   - Has the popularity of your name changed since you were born?
+   
+- Step 5: Knit your document
+   
+```{r echo=FALSE}
+countdown(minutes = 10, seconds = 00)
+```
+   
+
+---
+class: center, middle
+
+# What questions do you have ?
+
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/questions3.png")
+
+``` 
+
+---
+
+class: center, middle
+
+## Before we break... a key idea 
+
+```{r echo=FALSE, out.width= "800px"}
+knitr::include_graphics("img/pipe.png")
+
+``` 
+
+Image credit Dani Navarro [Tidyverse for Beginners](https://slides.com/djnavarro/tidyverse-for-beginners#/)
+
+---
+
+class: center, middle
+
+# Time for a break...
+
+### Next up.... your own data
+
+```{r echo=FALSE}
+countdown(minutes = 15, seconds = 00)
+```
+
+---
+
+class: inverse
+
+# Your turn 5: Getting YOUR data in  
+
+- Step 1: Upload your data into the data folder
+
+- Step 2: Make a new chunk (Cmd-Option-I)
+
+- Step 3: Copy the template code
+
+```
+df <- read_csv(here("data", "file.csv"))
+
+```
+
+- Step 3: Adapt the template to match your datafile
+
+- Step 4: Run the chunk to read your data in 
+   
+- Step 5: Have a look at your data, any obvious problems?
+
+```{r echo=FALSE}
+countdown(minutes = 5, seconds = 00)
+``` 
+   
+
+---
+
+# YAY! your data is in R, but... 
+
+### ... there are no variable names
+### ... the variable names are weird
+### ... there are empty rows/columns
+
+---
+
+class: center
+
+# Enter the `janitor` package
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/janitor_clean_names.png")
+
+``` 
+
+---
+
+# You have already loaded library(janitor)
+
+
+### Problem 1: there are no variable names
+
+```
+betterdata <- yourdata %>%
+               row_to_names()
+```
+
+### Problem 2: the variable names are weird
+
+```
+betterdata <- yourdata %>%
+               clean_names()
+```
+
+
+
+
+
+
+---
+
+# You have already loaded library(janitor)
+
+
+### Problem 3: there are empty rows/columns
+
+```
+betterdata <- yourdata %>%
+               remove_empty(which = c("rows", "columns"))
+```
+
+### Problem 1, 2, AND 3: Use the pipe %>% 
+
+```
+betterdata <- yourdata %>%
+  row_to_names() %>%
+  clean_names() %>%
+   remove_empty(which = c("rows", "columns"))
+  
+```
+---
+
+# Another common problem
+
+You regret the way your named your variables
+
+---
+
+class: center
+
+# What questions do you have ?
+
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/questions4.jpg")
+
+``` 
+
+---
+
+---
+class: center
+
+# What questions do you have ?
+
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/questions5.jpg")
+
+``` 
+
+--- 
+class: center, middle, inverse
+
+# Make a ggplot
+
+---
+
 
 

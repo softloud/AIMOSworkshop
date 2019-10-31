@@ -135,29 +135,22 @@ countdown(minutes = 2, seconds = 00)
   
 # Why I R...
 
-.pull-left[
-
-### [One stop shop](https://twitter.com/kara_woo/status/1100908125396193281) 
-
-
-### [Equity](https://rfortherestofus.com/2019/07/equity/)
-
-
+.left-column[ 
 
 ### [Reproducibility](https://www.nature.com/articles/s41559-017-0160)
 
+### [One stop shop](https://twitter.com/kara_woo/status/1100908125396193281) 
 
+### [Equity](https://rfortherestofus.com/2019/07/equity/)
 
 ### [Community](https://qz.com/work/1661486/r-ladies-made-data-science-inclusive/)
 
+### [Fun!](https://headrush.typepad.com/creating_passionate_users/2005/06/kicking_ass_is_.html) 
+
+] 
 
 
-### [Fun!](https://headrush.typepad.com/creating_passionate_users/2005/06/kicking_ass_is_.html)  
- 
-]
-
-.pull-right[
-
+.right-column[ 
 
 ```{r echo=FALSE, out.width= "1000px"}
 knitr::include_graphics("img/stats.jpeg")
@@ -166,6 +159,7 @@ knitr::include_graphics("img/stats.jpeg")
 Image credit Darren Dahly @statsepi
 
 ]
+
 
 ---
 
@@ -266,6 +260,19 @@ countdown(minutes = 4, seconds = 00)
 
 ---
 
+class: center
+
+# What questions do you have ?
+
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/questions1.jpg")
+
+``` 
+
+
+---
+
 # Packages
 
 A package is a group functions that some kind person has written, tested, bundled together and given away for everyone to use. 
@@ -356,10 +363,7 @@ Step 1. In your console, install...
 install.packages("packagename")
 ```
 
-
-<br>
-
-Step 2. Then open the demo.Rmd file and add ...
+Step 2. Then open the demo.Rmd file and add the following to the "code chunk" under `library(tidyverse)`. 
 
 ```
 library(janitor) 
@@ -368,13 +372,26 @@ library(beepr)
 library(praise)
 
 ```
-
-to the "chunk" under `library(tidyverse)`
+Run the code in the chunk using the little green arrow on the right 
 
 ```{r echo=FALSE}
 countdown(minutes = 4, seconds = 00)
 ``` 
 
+
+---
+
+class: center
+
+# What questions do you have ?
+
+<br>
+<br>
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/questions2.jpg")
+
+``` 
 
 ---
 
@@ -434,6 +451,17 @@ Then choose "Knit" and check out the output.
 countdown(minutes = 2, seconds = 00)
 ```
 
+
+---
+class: center
+
+# What questions do you have ?
+
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/questions6.jpg")
+
+``` 
+
 ---
 
 class: center, middle
@@ -442,21 +470,20 @@ class: center, middle
 
 ---
 
-# Where is your data?
+# Where is the data?
 
 .pull-left[
 
 The `here` package will help avoid file path drama. You can use it to tell R where you data is, relative to the top level of your project folder. 
 
-```{r echo=FALSE, out.width= "600px"}
+```{r echo=FALSE, out.width= "400px"}
 knitr::include_graphics("img/here.png")
 ```
-
-Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustrations) @allison_horst from @RLadiesSB
  
 ] 
 
 .pull-right[
+
 We can use the `read_csv()` from `readr` and `here()` to read a .csv file. 
 
 #### Template code
@@ -466,9 +493,12 @@ df <- read_csv(here("data", "file.csv"))
 
 ```
 <br>
-<br>
 
 > BTW you can read .xls, .sav, .sas, .stata, but you will need to install the `readxl` or `haven` packages.
+
+<br>
+
+Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustrations) @allison_horst from @RLadiesSB
 
 ] 
 
@@ -510,46 +540,163 @@ class: center, middle
 
 # What questions do you have ?
 
---
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/questions3.png")
 
-
-## 3 key ideas 
-
-### 1. The pipe %>%
-
-### 2. filter()
-
-### 3. ggplot grammar 
+``` 
 
 ---
 
+class: center, middle
+
+## Before we break... a key idea 
+
+```{r echo=FALSE, out.width= "800px"}
+knitr::include_graphics("img/pipe.png")
+
+``` 
+
+Image credit Dani Navarro [Tidyverse for Beginners](https://slides.com/djnavarro/tidyverse-for-beginners#/)
+
+---
+
+class: center, middle
+
 # Time for a break...
 
-Before we do, go back to your favourite plot and add this line to the bottom of the chunk. And then tweet your first ggplot. 
-
-```{r}
-ggsave("myfirstggplot.png")
-```
-
-Tag @AIMOS2019 and @JenRichmondPhD
-
-Next up.... your own data
+### Next up.... your own data
 
 ```{r echo=FALSE}
 countdown(minutes = 15, seconds = 00)
 ```
----
-
-# Cleaning it up
 
 ---
 
+class: inverse
+
+# Your turn 5: Getting YOUR data in  
+
+- Step 1: Upload your data into the data folder
+
+- Step 2: Make a new chunk (Cmd-Option-I)
+
+- Step 3: Copy the template code
+
+```
+df <- read_csv(here("data", "file.csv"))
+
+```
+
+- Step 3: Adapt the template to match your datafile
+
+- Step 4: Run the chunk to read your data in 
+   
+- Step 5: Have a look at your data, any obvious problems?
+
+```{r echo=FALSE}
+countdown(minutes = 5, seconds = 00)
+``` 
+   
+
+---
+
+# YAY! your data is in R, but... 
+
+### ... there are no variable names
+### ... the variable names are weird
+### ... there are empty rows/columns
+
+---
+
+class: center
+
+# Enter the `janitor` package
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/janitor_clean_names.png")
+
+``` 
+
+---
+
+# You have already loaded library(janitor)
+
+
+### Problem 1: there are no variable names
+
+```
+betterdata <- yourdata %>%
+               row_to_names()
+```
+
+### Problem 2: the variable names are weird
+
+```
+betterdata <- yourdata %>%
+               clean_names()
+```
+
+
+
+
+
+
+---
+
+# You have already loaded library(janitor)
+
+
+### Problem 3: there are empty rows/columns
+
+```
+betterdata <- yourdata %>%
+               remove_empty(which = c("rows", "columns"))
+```
+
+### Problem 1, 2, AND 3: Use the pipe %>% 
+
+```
+betterdata <- yourdata %>%
+  row_to_names() %>%
+  clean_names() %>%
+   remove_empty(which = c("rows", "columns"))
+  
+```
+---
+
+# Another common problem
+
+You regret the way your named your variables
+
+---
+
+class: center
+
+# What questions do you have ?
+
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/questions4.jpg")
+
+``` 
+
+---
+
+---
+class: center
+
+# What questions do you have ?
+
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/questions5.jpg")
+
+``` 
+
+--- 
 class: center, middle, inverse
 
 # Make a ggplot
 
 ---
-
 
 
 
