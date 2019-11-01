@@ -1,0 +1,17 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Welcome to the [R-Ladies](https://rladies.org/) AIMOS workshop for the 2019 [Association for Interdiscipliary Meta-research & Open Science](https://www.aimos2019conference.com/) meeting in Melbourne. 
+
+
+For more information, check out the [r-ladies aimos site](https://jenrichmond.github.io/AIMOSworkshop/).
