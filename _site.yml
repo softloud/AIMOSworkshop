@@ -13,8 +13,6 @@ navbar:
       menu: 
         - text: "info"
           href: workshop-info.html
-        - text: "start here"
-          href: start-here.html
         - text: "slides"
           href: aimos/workshop-slides.html
     - text: "hackathon"
