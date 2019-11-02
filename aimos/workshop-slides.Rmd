@@ -605,55 +605,51 @@ countdown(minutes = 5, seconds = 00)
 ### ... there are no variable names
 ### ... the variable names are weird
 ### ... there are empty rows/columns
+### ... you don't need all of those variables
+### ... you regret your choice of variable names
+
 
 ---
 
-class: center
+# functions from the `janitor` package
 
-# Enter the `janitor` package
+.pull-left[
 
-```{r echo=FALSE, out.width= "700px"}
-knitr::include_graphics("img/janitor_clean_names.png")
-
-``` 
-
----
-
-# You have already loaded library(janitor)
-
-
-### Problem 1: there are no variable names
+#### Problem 1: there are no variable names
 
 ```
 betterdata <- yourdata %>%
                row_to_names()
 ```
 
-### Problem 2: the variable names are weird
+#### Problem 2: the variable names are weird
 
 ```
 betterdata <- yourdata %>%
                clean_names()
 ```
 
-
-
-
-
-
----
-
-# You have already loaded library(janitor)
-
-
-### Problem 3: there are empty rows/columns
+#### Problem 3: there are empty rows/columns
 
 ```
 betterdata <- yourdata %>%
                remove_empty(which = c("rows", "columns"))
 ```
 
-### Problem 1, 2, AND 3: Use the pipe %>% 
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width= "600px"}
+knitr::include_graphics("img/janitor_clean_names.png")
+
+``` 
+
+]
+
+---
+
+## Problem 1, 2, AND 3: Use the pipe %>% 
 
 ```
 betterdata <- yourdata %>%
@@ -664,13 +660,75 @@ betterdata <- yourdata %>%
 ```
 ---
 
-# Another common problem
+# functions from the `dplyr` package
 
-You regret the way your named your variables
+.right-column[
+
+### Problem 4: you don't need all of those variables
+
+```
+# Keep the ones you want, column 1 and 2
+betterdata <- yourdata %>%
+  select(col1, col2) 
+
+```
+
+
+```
+# Keep more than one column, columns 1 thru 5
+betterdata <- yourdata %>%
+  select(col1:col5) 
+
+```
+
+```
+# Drop columns you don't want using -name, drop column 6
+betterdata <- yourdata %>%
+  select(-col6) 
+
+```
+
+]
+
+.left-column[
+
+```{r echo=FALSE, out.width= "300px"}
+knitr::include_graphics("img/dplyr.png")
+
+``` 
+
+]
+
 
 ---
 
-class: center
+### Problem 5: You regret your variable names 
+
+```
+betterdata <- yourdata %>%
+  rename(newname1 = oldname1, newname2 = oldname2)
+  
+```
+---
+
+# Problem 1-5 demo
+
+## My Favourite Things
+
+
+---
+
+
+class: inverse
+
+# Your turn... have a go at solving problems 1-5
+
+```{r echo=FALSE}
+countdown(minutes = 20, seconds = 00)
+``` 
+
+---
+
 
 # What questions do you have ?
 
