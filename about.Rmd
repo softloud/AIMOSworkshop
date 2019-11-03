@@ -31,7 +31,7 @@ Written by Dani Navarro for psych students, its funny and well written and recen
 
 [RStudio Education](https://education.rstudio.com/)
 
-New website from the RStudio Education team compiles links to all resources for learners and teachers, no matter where you are on your learning journey- you will find something useful here. 
+The new website from the RStudio Education team compiles links to resources for both learners and teachers. No matter where you are on your learning journey- you will find something useful here. 
 
 [RYouWithMe](https://rladiessydney.org/courses/ryouwithme/)
 

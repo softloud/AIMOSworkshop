@@ -3,7 +3,7 @@ title: "hackathon-cheatsheet"
 description: |
   Let's start at the very beginning...
 author:
-  - name: Jen Richmond
+  - name: Charles Gray & Jen Richmond
     url: https://example.com/norajones
     affiliation: UNSW Sydney
     affiliation_url: http://jenrichmond.rbind.io/post/
@@ -38,20 +38,20 @@ R-Studio provides a guide to [how to contribute a cheatsheet](https://rstudio.co
 
 ## A possible approach for the manuscript
 
-It’s tempting to consider the intellectual rigour required to master a statistical computing task. However, there is another consideration, that frequently proves to be more challenging to overcome. When we are tired, harried, or have several other things to do, if a task will require a significant investment of a cognitive energy, we may well leave that task for another day. 
+The intellectual rigour required to master a statistical computing task should not be underestimated. However, there is another consideration, that frequently proves to be more challenging to overcome. When we are tired, harried, or have several other things to do, if a task will require a significant investment of a cognitive energy, we may well leave that task for another day. 
 
-How do we take scientific workflows that are so technical that many practicing scientists eschew them, and make them more accessible? How do we extract the bare minimum, the *boring* examples, for utility, while making the onboarding of a new method as much of a pleasure as possible?
+How do we take scientific workflows, which are so technical that many practicing scientists eschew them, and make them more accessible? How do we extract the bare minimum, the *boring* examples, for utility, while making the onboarding of a new method as much of a pleasure as possible?
 
 > Use the smallest, simplest, most built-in data possible. Think: iris or mtcars. **Bore me.** (Jenny Bryan in `reprex::` [dos and donts](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html))
 
-Our manuscript will present our *walkthrough for data analysis*, where *walkthrough* is a term we borrow from video gaming terminology for a guide that enhances the player’s enjoyment of the game, tailored to their expertise.   
+Our manuscript will present a *walkthrough for data analysis*, where *walkthrough* is a term we borrow from video gaming terminology to refer to a guide that enhances the player’s enjoyment of the game, in a way that is tailored to their expertise.   
 
-To optimise a walkthrough, we propose it must have both extrinsic and intrinsic incentives. The extrinsic incentive is, in a research context, a given. But we propose building a walkthrough we the objective of *meritget*. 
+To optimise a walkthrough, we propose it must have both extrinsic and intrinsic incentives. In a research context, the extrinsic incentive is a given. We propose building a walkthrough with the objective of *meritget*. 
 
 
 ![In the 2009 Nintendo hand=held DS game Scribblenauts, the player is informed of "merit get", when a trophy, "merit", is earned. (image source [wikipedia](https://upload.wikimedia.org/wikipedia/en/3/3a/Scribblenauts_cover.jpg?1572521817931))](https://upload.wikimedia.org/wikipedia/en/3/3a/Scribblenauts_cover.jpg?1572521817931)
 
 
-We informally define *meritget* to be the moment when you turn to the person beside you and high-five at an unconference such as AIMOS. A working formal defintiion of meritget is an intrinsic incentive that does not have extrinsic value but sparks joy in the user.  
+We informally define *meritget* to be the moment when you turn to the person beside you and high-five at an unconference such as AIMOS. A working formal definition of meritget is an intrinsic incentive that does not have extrinsic value but sparks joy in the user.  
 
 A possible line of discussion for the hackathon is a formal definition of *meritget* and specifically how we tried to achieve *meritget*  in our *walkthrough for data analysis*. 

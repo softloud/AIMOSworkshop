@@ -31,7 +31,7 @@ If you have been thinking of trying R but been scared of "writing code", this se
 1. Get summary statistics using functions from `skimr` and `dplyr` 
 1. Plot your data using `ggplot` 
 
-But perhaps most importantly, we will show you how to find solutions to your R problems on the internet and how to recognise when your google search has found a solution. 
+But perhaps most importantly, we will show you how to use google to find solutions to your R problems and how to recognise when your google search has found a solution. 
 
 ### This workshop will be a good fit for you if… 
 
@@ -39,4 +39,9 @@ But perhaps most importantly, we will show you how to find solutions to your R p
 - you’ve tried to learn R by yourself and quickly got overwhelmed 
 - you’ve wanted to try R but not been sure where to start
 - you are a bit scared of “writing code”
+
+
+### This is a BYO data session. 
+
+Bring a datafile (preferably in .csv format but .sav, .xls, .sas are also fine) that you would like to work with in R. 
 

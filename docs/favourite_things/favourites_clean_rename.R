@@ -2,13 +2,16 @@
 library(janitor)
 library(tidyverse)
 library(here)
+library(skimr)
 
 
-fav <- read_csv(here("favourite_things", "favourite.csv"))
+favourite <- read_csv(here("favourite_things", "fav_subset.csv"))
 
 #clean names
-clean <- fav %>%
-  clean_names()
+clean <- favourite %>%
+  clean_names() %>%
+  rowid_to_column(var = "id") %>%
+  select(-timestamp)
 
 #check the names
 names(clean)
@@ -20,44 +23,42 @@ renamed <- clean %>%
          kettles = bright_copper_kettles, 
          mittens = warm_woollen_mittens, 
          packages = brown_paper_packages_tied_up_with_string, 
-         ponies = cream_colored_ponies, 
-         strudels = crisp_apple_strudels, 
-         schnitzel = schnitzel_with_noodles, 
-         geese = wild_geese_that_fly_with_the_moon_on_their_wings, 
-         sashes = girls_in_white_dresses_with_blue_satin_sashes, 
-         snowflakes = snowflakes_that_stay_on_my_nose_and_eyelashes, 
-         winters = silver_white_winters_that_melt_into_springs, 
-         viewings = how_many_times_do_you_think_you_have_you_seen_the_sound_of_music)
+         age = how_old_are_you, 
+         viewings = how_many_times_have_you_seen_the_sound_of_music)
 
+names(renamed)
 
 # make wide data long
 
 long <- renamed %>%
-  pivot_longer(cols = raindrops:winters, 
+  pivot_longer(cols = raindrops:packages, 
                names_to = "things", values_to = "rating") 
 
 
-# define groups of things
+# look at the structure of the data
 
-animals <- c("whiskers", "ponies", "geese")
+head(long)
 
-weather <- c("raindrops", "snowflakes", "winters")
+str(long)
 
-food <- c("strudels", "schnitzel")
-
-other <- c("sashes", "packages", "mittens", "kettles")
-
-bells <- c("doorbells", "sleighbells")
-
-# make a new column classifying the things
-
-typed <- long %>%
-  mutate(type = if_else(things %in% animals, "animals", 
-                  if_else(things %in% weather, "weather",
-                    if_else(things %in% food, "food", 
-                    if_else(things %in% bells, "bells",
-                      if_else(things %in% other, "other", "none"))))))
+glimpse(long)
 
 
-         
 
+#get summary
+
+summary(long)
+
+skim(long)
+
+long %>%
+  group_by(things) %>%
+  summarise(meanrating = mean(rating)) %>%
+  ggplot(aes(x = things, y = meanrating)) +
+  geom_col()
+
+long %>%
+  filter(viewings < 100) %>%
+  ggplot(aes(x = age, y = viewings)) +
+  geom_point() +
+  geom_smooth()
