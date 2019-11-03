@@ -70,7 +70,7 @@ layout: true
 
 4. Cleaning it up
 
-5. Make a ggplot
+5. Summary stats & ggplot
 
 <br>
 
@@ -135,7 +135,7 @@ countdown(minutes = 2, seconds = 00)
   
 # Why I R...
 
-.left-column[ 
+.left-narrow[ 
 
 ### [Reproducibility](https://www.nature.com/articles/s41559-017-0160)
 
@@ -150,9 +150,9 @@ countdown(minutes = 2, seconds = 00)
 ] 
 
 
-.right-column[ 
+.right-wide[ 
 
-```{r echo=FALSE, out.width= "1000px"}
+```{r echo=FALSE, out.width= "800px"}
 knitr::include_graphics("img/stats.jpeg")
 ```
 
@@ -600,7 +600,9 @@ countdown(minutes = 5, seconds = 00)
 
 ---
 
-# YAY! your data is in R, but... 
+# YAY! 
+
+## your data is in R, but its probably dirty. Maybe...
 
 ### ... there are no variable names
 ### ... the variable names are weird
@@ -613,7 +615,6 @@ countdown(minutes = 5, seconds = 00)
 
 # functions from the `janitor` package
 
-.pull-left[
 
 #### Problem 1: there are no variable names
 
@@ -629,27 +630,22 @@ betterdata <- yourdata %>%
                clean_names()
 ```
 
+
 #### Problem 3: there are empty rows/columns
 
 ```
 betterdata <- yourdata %>%
                remove_empty(which = c("rows", "columns"))
+               
 ```
-
-]
-
-.pull-right[
-
-```{r echo=FALSE, out.width= "600px"}
-knitr::include_graphics("img/janitor_clean_names.png")
-
-``` 
-
-]
-
 ---
 
 ## Problem 1, 2, AND 3: Use the pipe %>% 
+
+```{r echo=FALSE, out.width= "600px"}
+knitr::include_graphics("img/janitor_clean_names.png")
+``` 
+
 
 ```
 betterdata <- yourdata %>%
@@ -658,48 +654,33 @@ betterdata <- yourdata %>%
    remove_empty(which = c("rows", "columns"))
   
 ```
+
+
 ---
 
-# functions from the `dplyr` package
-
-.right-column[
+## functions from the `dplyr` package
 
 ### Problem 4: you don't need all of those variables
 
-```
-# Keep the ones you want, column 1 and 2
+#### Keep the ones you want
+``` 
 betterdata <- yourdata %>%
   select(col1, col2) 
 
 ```
-
+#### Keep more than one column using :
 
 ```
-# Keep more than one column, columns 1 thru 5
 betterdata <- yourdata %>%
   select(col1:col5) 
 
 ```
-
+#### Drop columns you don't want using -
 ```
-# Drop columns you don't want using -name, drop column 6
 betterdata <- yourdata %>%
   select(-col6) 
 
 ```
-
-]
-
-.left-column[
-
-```{r echo=FALSE, out.width= "300px"}
-knitr::include_graphics("img/dplyr.png")
-
-``` 
-
-]
-
-
 ---
 
 ### Problem 5: You regret your variable names 
@@ -723,12 +704,54 @@ class: inverse
 
 # Your turn... have a go at solving problems 1-5
 
+.pull-left[
+No variable names
+
+```
+betterdata <- yourdata %>%
+               row_to_names()
+```
+Weird variable names 
+
+```
+betterdata <- yourdata %>%
+               clean_names()
+```
+
+]
+
+.pull-right[
+
+Get rid of variables
+
+``` 
+betterdata <- yourdata %>%
+  select(col1, col2) 
+
+```
+Rename variables
+
+```
+betterdata <- yourdata %>%
+  rename(newname1 = oldname1)
+  
+```
+
+]
+
+Empty rows/columns
+
+```
+betterdata <- yourdata %>%
+  remove_empty(which = c("rows", "columns"))
+               
+```
+
 ```{r echo=FALSE}
 countdown(minutes = 20, seconds = 00)
 ``` 
 
 ---
-
 
 # What questions do you have ?
 
@@ -738,6 +761,33 @@ knitr::include_graphics("img/questions4.jpg")
 ``` 
 
 ---
+
+# It clean-er but is it tidy? 
+
+pivot_longer & pivot_wider
+
+
+---
+
+
+# Summary stats
+
+```
+summary(yourdata)
+```
+
+```
+skim(yourdata)
+```
+
+```
+summarydf <- yourdata %>%
+  group_by(something_interesting) %>%
+  summarise(mean = mean(resp), 
+            stdev = sd(resp), 
+            n = n(), 
+            se = stdev/sqrt(n))
+```
 
 ---
 class: center

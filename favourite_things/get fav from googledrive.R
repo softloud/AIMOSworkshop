@@ -10,5 +10,19 @@ library(tidyverse)
 # read sheet
 fav <- read_sheet(favourite)
 
-#### Charles probably wont be able to get doc from googledrive, so write to csv for her
-write_csv(fav, "favourite.csv")
+fav <- as.data.frame(fav)
+
+glimpse(fav)
+
+#select just first verse, 
+fav5 <- fav %>%
+  select(1:6, 16, 20, 23) 
+
+## write to csv 
+write_csv(fav, here("favourite_things", "fav_all.csv"))
+
+## write to csv 
+write_csv(fav5, here("favourite_things", "fav_subset.csv"))
+
+
+          
