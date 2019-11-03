@@ -357,7 +357,7 @@ Step 1. In your console, install...
 - janitor
 - here
 - beepr
-- praise
+- skimr
 
 ```{r eval = FALSE}
 install.packages("packagename")
@@ -369,7 +369,7 @@ Step 2. Then open the demo.Rmd file and add the following to the "code chunk" un
 library(janitor) 
 library(here)
 library(beepr)
-library(praise)
+library(skimr)
 
 ```
 Run the code in the chunk using the little green arrow on the right 
@@ -662,28 +662,19 @@ betterdata <- yourdata %>%
 
 ### Problem 4: you don't need all of those variables
 
-#### Keep the ones you want
 ``` 
 betterdata <- yourdata %>%
   select(col1, col2) 
 
-```
-#### Keep more than one column using :
-
-```
 betterdata <- yourdata %>%
   select(col1:col5) 
 
-```
-#### Drop columns you don't want using -
-```
 betterdata <- yourdata %>%
   select(-col6) 
 
 ```
----
 
-### Problem 5: You regret your variable names 
+### Problem 5: you regret your variable names 
 
 ```
 betterdata <- yourdata %>%
@@ -702,7 +693,7 @@ betterdata <- yourdata %>%
 
 class: inverse
 
-# Your turn... have a go at solving problems 1-5
+# Your turn... try solving problems 1-5
 
 .pull-left[
 No variable names
@@ -799,7 +790,8 @@ knitr::include_graphics("img/questions5.jpg")
 
 ``` 
 
---- 
+---
+
 class: center, middle, inverse
 
 # Make a ggplot
