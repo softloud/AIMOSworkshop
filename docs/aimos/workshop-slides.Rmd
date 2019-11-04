@@ -806,8 +806,8 @@ knitr::include_graphics("img/wide_long.png")
 # pivot_longer() from `tidyr`
 
 ### pivot_longer wants to know 3 things
-1. what you want to call the new column containing the names of the columns (names_to)
-2. what you want to call the new column containing the values (values_to)
+1. names_to = what you want to call the new column containing the names of the columns 
+2. values_to = what you want to call the new column containing the values 
 3. the range of columns that you want to make long (col1:col6)
  
 <br>
@@ -855,7 +855,6 @@ countdown(minutes = 15, seconds = 00)
 
 ```
 ready_to_plot <- raw_data %>%
-  clean_names() %>%
   select(Just, The, Columns, You, Want) %>%
   rename(just = Just, the = The, columns = Columns, you = You, want = Want) %>%
   pivot_longer(names_to = "condition", values = "response", columns:want)
@@ -872,10 +871,6 @@ class: center, middle
 ```{r echo=FALSE}
 countdown(minutes = 10, seconds = 00)
 ```
-
----
-
-
 
 ---
 
@@ -1058,7 +1053,7 @@ countdown(minutes = 10, seconds = 00)
 
 ---
 
-# How to I add/get rid of  ______ ?
+# Google: How to I add/get rid of  ______ ggplot in R?
 
 .pull-left[ 
 
@@ -1072,7 +1067,7 @@ countdown(minutes = 10, seconds = 00)
 
 .pull-right[
 
-```{r echo=FALSE, out.width= "600px"}
+```{r echo=FALSE, out.width= "400px"}
 knitr::include_graphics("img/google_hadley.png")
 
 ``` 
@@ -1083,15 +1078,20 @@ knitr::include_graphics("img/google_hadley.png")
 
 ## What next?
 
-1. Hackathon tomorrow!! Come and help us make a "walkthrough" for R beginners 
+#### 1. Unconf session tomorrow!! 
+Come and help us make a "walkthrough" for R beginners 
 
-2. Check out [About](https://jenrichmond.github.io/AIMOSworkshop/about.html) for links to recommended learning resources
+#### 2. Check out [About](https://jenrichmond.github.io/AIMOSworkshop/about.html) 
+Lots of links to recommended learning resources
 
-3. Find an R-Ladies chapter in your town on Meetup and go along. If there isn't an R-Ladies in your town, start one! Or join R-Ladies Remote community. 
+#### 3. Find an [R-Ladies chapter](https://gqueiroz.shinyapps.io/rshinylady/) in your town 
+If there isn't an R-Ladies in your town, start one! Or join R-Ladies Remote community. 
 
-4. Get on Twitter and follow #rstats, try #TidyTuesday, join #r4ds Slack
+#### 4. Get on Twitter 
+Follow #rstats, try #TidyTuesday, join #r4ds Slack
 
-5. Put together a "ShutUpAndCode" group in your school; learn with friends and make it fun. 
+#### 5. Organise  a "ShutUpAndCode" group 
+Find people in your school who also want to learn; make new friends and make learning fun. 
 
 
 ---
