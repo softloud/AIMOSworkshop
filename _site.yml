@@ -11,10 +11,18 @@ navbar:
       href: about.html
     - text: "workshop"
       menu: 
-        - text: "info"
+        - text: "overview"
           href: workshop-info.html
         - text: "slides"
           href: aimos/workshop-slides.html
-    - text: "hackathon"
-      href: hackathon-cheatsheet.html
+    - text: "unconf"
+      menu:
+        - text: "overview"
+          href: overview.html
+        - text: "what needs doing"
+          href: doing.html
+        - text: "document map"
+          href: documents.html
+        - text: "meritget"
+          href: meritget.html    
 output: distill::distill_article
