@@ -1,0 +1,30 @@
+---
+title: "meritget"
+description: |
+  A starting point for discussions about the definitions of meritget.
+author:
+  - name: Charles T. Gray 
+    url: https://softloud.github.io/onetimetrophybitch/about.html
+    affiliation: R-Ladies
+    affiliation_url: https://rladies.org/
+  - name: Jen Richmond
+    url: http://jenrichmond.rbind.io/post/
+    affiliation: R-Ladies
+    affiliation_url: https://rladies.org/
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+To optimise a walkthrough, we propose it must have both extrinsic and intrinsic incentives. In a research context, the extrinsic incentive is a given. We propose building a walkthrough with the objective of *meritget*. 
+
+![In the 2009 Nintendo hand=held DS game Scribblenauts, the player is informed of "merit get", when a trophy, "merit", is earned. (image source [wikipedia](https://upload.wikimedia.org/wikipedia/en/3/3a/Scribblenauts_cover.jpg?1572521817931))](https://upload.wikimedia.org/wikipedia/en/3/3a/Scribblenauts_cover.jpg?1572521817931)
+
+
+We informally define *meritget* to be the moment when you turn to the person beside you and high-five at an unconference such as AIMOS. A working formal definition of meritget is an intrinsic incentive that does not have extrinsic value but sparks joy in the user.  
+
+A possible line of discussion for the hackathon is a formal definition of *meritget* and specifically how we tried to achieve *meritget*  in our *walkthrough for data analysis*. 

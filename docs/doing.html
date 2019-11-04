@@ -19,27 +19,34 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>rladiesAIMOS: start here</title>
+  <title>rladiesAIMOS: what will need doing</title>
+  
+  <meta property="description" itemprop="description" content="Will I want to participate in this unconf session?"/>
   
   
-  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2019-11-04"/>
+  <meta property="article:created" itemprop="dateCreated" content="2019-11-04"/>
+  <meta name="article:author" content="Charles T. Gray"/>
   <meta name="article:author" content="Jen Richmond"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="rladiesAIMOS: start here"/>
+  <meta property="og:title" content="rladiesAIMOS: what will need doing"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Will I want to participate in this unconf session?"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="rladiesAIMOS"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="rladiesAIMOS: start here"/>
+  <meta property="twitter:title" content="rladiesAIMOS: what will need doing"/>
+  <meta property="twitter:description" content="Will I want to participate in this unconf session?"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","output"]}},"value":[{"type":"character","attributes":{},"value":["start here"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jen Richmond"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["what will need doing"]},{"type":"character","attributes":{},"value":["Will I want to participate in this unconf session?\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Charles T. Gray"]},{"type":"character","attributes":{},"value":["https://softloud.github.io/onetimetrophybitch/about.html"]},{"type":"character","attributes":{},"value":["R-Ladies"]},{"type":"character","attributes":{},"value":["https://rladies.org/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Jen Richmond"]},{"type":"character","attributes":{},"value":["http://jenrichmond.rbind.io/post/"]},{"type":"character","attributes":{},"value":["R-Ladies"]},{"type":"character","attributes":{},"value":["https://rladies.org/"]}]}]},{"type":"character","attributes":{},"value":["2019-11-04"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1270,7 +1277,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"start here","authors":[{"author":"Jen Richmond","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#"}]}
+{"title":"what will need doing","description":"Will I want to participate in this unconf session?","authors":[{"author":"Charles T. Gray","authorURL":"https://softloud.github.io/onetimetrophybitch/about.html","affiliation":"R-Ladies","affiliationURL":"https://rladies.org/"},{"author":"Jen Richmond","authorURL":"http://jenrichmond.rbind.io/post/","affiliation":"R-Ladies","affiliationURL":"https://rladies.org/"}],"publishedDate":"2019-11-04T00:00:00.000+11:00","citationText":"Gray & Richmond, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1316,70 +1323,29 @@ hackathon
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>start here</h1>
-
+<h1>what will need doing</h1>
+<p>Will I want to participate in this unconf session?</p>
 </div>
 
 <div class="d-byline">
+  Charles T. Gray <a href="https://softloud.github.io/onetimetrophybitch/about.html" class="uri">https://softloud.github.io/onetimetrophybitch/about.html</a> (R-Ladies)<a href="https://rladies.org/" class="uri">https://rladies.org/</a>
   
-  Jen Richmond
+,   Jen Richmond <a href="http://jenrichmond.rbind.io/post/" class="uri">http://jenrichmond.rbind.io/post/</a> (R-Ladies)<a href="https://rladies.org/" class="uri">https://rladies.org/</a>
   
-
+<br/>2019-11-04
 </div>
 
 <div class="d-article">
-<h1 id="lets-start-at-the-very-beginning">Lets start at the very beginning…</h1>
-<h1 id="abstract">Abstract</h1>
-<p>Lots of researchers who are interested in open science, replication, and reproducibility use R. But how did they learn it? Research methods courses are most often not taught in R. If you are not terribly familiar with coding in general, teaching yourself how to code in R is a big task, and doing it by yourself is lonely and frustrating.</p>
-<p>If you have been thinking of trying R but been scared of “writing code”, this session is for you. Join folks from R-Ladies and start your journey towards reproducible analysis. You will learn how to find your way around RStudio, get your OWN data into R, clean it up a little, and generate some summary stats and plots.</p>
-<h1 id="by-the-end-of-the-workshop-you-will-be-able-to">By the end of the workshop you will be able to…</h1>
-<ol type="1">
-<li>Find your way around RStudio</li>
-<li>Set up an R project and understand how to use the <code>here</code> package to avoid filepath drama</li>
-<li>Read your datafile into R, using functions from the <code>readr</code> and <code>datapasta</code> packages</li>
-<li>Learn how to clean with the <code>janitor</code> package</li>
-<li>Convert your data from wide to long format and back again using functions from <code>tidyr</code></li>
-<li>Get summary statistics using functions from <code>skimr</code> and <code>dplyr</code></li>
-<li>Plot your data using <code>ggplot</code></li>
-</ol>
-<p>But perhaps most importantly, we will show you how to find solutions to your R problems on the internet and how to recognise when your google search has found a solution.</p>
-<h1 id="this-workshop-will-be-a-good-fit-for-you-if">This workshop will be a good fit for you if…</h1>
+<h1 id="what-will-need-doing">what will need doing</h1>
+<p>We welcome an interest in contributing to at least one of the following, or proposing another working category:</p>
 <ul>
-<li>you’ve been to an R training and it all made sense at the time, but when you got back to your lab you couldn’t get R to read your data.</li>
-<li>you’ve tried to learn R by yourself and quickly got overwhelmed</li>
-<li>you’ve wanted to try R but not been sure where to start</li>
-<li>you are a bit scared of “writing code”</li>
+<li>Visual design of the cheatsheet;</li>
+<li>Pedagogical values and objectives;</li>
+<li>Technical implementation in .Rmd;</li>
+<li>Write-up of <a href="https://docs.google.com/document/d/10cPvhgJT93lsRmel9A43qgdt30hxX6Xkq4e92MHqFT8/edit?usp=sharing">manuscript</a> that describes and publishes the cheatsheet.</li>
 </ul>
-<h1 id="things-we-will-cover..">Things we will cover..</h1>
-<h2 id="before-we-deal-with-data..">Before we deal with data..</h2>
-<ul>
-<li>we need to find our way around Rstudio (maybe customise how it looks?)</li>
-<li>set global settings so R doesn’t remember</li>
-<li>make a new project</li>
-<li>learn about here()</li>
-<li>learn about packages, how to install, how to call library()</li>
-</ul>
-<h2 id="an-aside-about-data-structure">an aside about data structure</h2>
-<ul>
-<li>human readable</li>
-<li>wide</li>
-<li>long</li>
-<li>hybrid</li>
-</ul>
-<h2 id="common-things-you-deal-when-you-first-get-data">Common things you deal when you first get data</h2>
-<ul>
-<li>reading it in (csv, but maybe also from spss via haven)</li>
-<li>clean names (janitor)</li>
-<li>renaming things (dplyr)</li>
-<li>merge cells (?)</li>
-<li>empty rows (janitor)</li>
-<li>wide data long (tidyr)</li>
-<li>changing data types, making things factors</li>
-<li>maybe visualising/dealing with missing data? (naniar?)</li>
-</ul>
-<h2 id="get-some-summary-stats">Get some summary stats</h2>
-<p>ym - summary() skimr() - filter() - group_by() + summarise()</p>
-<h2 id="visualise">Visualise</h2>
+<h1 id="skills-required-for-participation">skills required for participation</h1>
+<p>Advanced knowledge of R is not required; merely an interest in the kind of problems you would like to use R to solve. Attendees of the associated workshop, Let’s start at the very beginning, are warmly invited to bring insights from their recent introduction to R, as there will be obstacles and smooth points in the learning process that are not as immediately apparent to those who have been using R for several years.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -1,0 +1,36 @@
+---
+title: "what will need doing"
+description: |
+  Will I want to participate in this unconf session?
+author:
+  - name: Charles T. Gray 
+    url: https://softloud.github.io/onetimetrophybitch/about.html
+    affiliation: R-Ladies
+    affiliation_url: https://rladies.org/
+  - name: Jen Richmond
+    url: http://jenrichmond.rbind.io/post/
+    affiliation: R-Ladies
+    affiliation_url: https://rladies.org/
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# what will need doing
+
+We welcome an interest in contributing to at least one of the following, or proposing another working category: 
+
+- Visual design of the cheatsheet; 
+- Pedagogical values and objectives; 
+- Technical implementation in .Rmd;
+- Write-up of [manuscript](https://docs.google.com/document/d/10cPvhgJT93lsRmel9A43qgdt30hxX6Xkq4e92MHqFT8/edit?usp=sharing) that describes and publishes the cheatsheet.
+
+# skills required for participation
+
+Advanced knowledge of R is not required; merely an interest in the kind of problems you would like to use R to solve. Attendees of the associated workshop, Let’s start at the very beginning, are warmly invited to bring insights from their recent introduction to R, as there will be obstacles and smooth points in the learning process that are not as immediately apparent to those who have been using R for several years.  
+
+
+
