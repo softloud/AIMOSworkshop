@@ -49,16 +49,22 @@ glimpse(long)
 
 summary(long)
 
-skim(long)
+skim(long) 
+
+# plot
 
 long %>%
   group_by(things) %>%
-  summarise(meanrating = mean(rating)) %>%
+  summarise(meanrating = mean(rating, na.rm = TRUE)) %>%
   ggplot(aes(x = things, y = meanrating)) +
-  geom_col()
+  geom_col() +
+  
 
 long %>%
   filter(viewings < 100) %>%
   ggplot(aes(x = age, y = viewings)) +
   geom_point() +
   geom_smooth()
+
+
+

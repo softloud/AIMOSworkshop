@@ -81,9 +81,13 @@ layout: true
 
 .pull-right[
 
-```{r echo=FALSE, out.width= "800px"}
-knitr::include_graphics("img/bblearning.jpg")
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/r_first_then.png")
 ```
+
+Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustrations) @allison_horst from R-Ladies Santa Barbara
+
+] 
 
 ]
 
@@ -233,6 +237,7 @@ class: inverse
 # Your turn 1: Let's start by redecorating
 
 .pull-left[
+
 From the top menu choose
 - Tools
 - Global Options
@@ -249,12 +254,9 @@ Then try out a few Editor themes and choose one you like.
 knitr::include_graphics("img/redecorate.png")
 ```
 
-
-
 ```{r echo=FALSE}
 countdown(minutes = 4, seconds = 00)
 ```
-
 
 ]
 
@@ -350,7 +352,7 @@ It's a good idea to put `library(tidyverse)` at the top of every analysis docume
 
 class: inverse 
 
-# Your turn 2: install some packages
+# Your turn 2: Install some packages
 
 Step 1. In your console, install...
 
@@ -509,7 +511,7 @@ Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustration
 
 class: inverse
 
-# Your turn 4: Read in and play around with the babynames data
+# Your turn 4: Read in the babynames data
 
 - Step 1: Make a new chunk (Cmd-Option-I)
 
@@ -520,7 +522,7 @@ df <- read_csv(here("data", "file.csv"))
 
 ```
 
-- Step 3: Adapt the template to match the babynames data 
+- Step 3: Adapt the template to read in the babynames data 
 
 - Step 4: Play with the code in each chunk to plot...
 
@@ -549,9 +551,9 @@ knitr::include_graphics("img/questions3.png")
 
 class: center, middle
 
-## Before we break... a key idea 
+# Before we break... a key idea 
 
-```{r echo=FALSE, out.width= "800px"}
+```{r echo=FALSE, out.width= "600px"}
 knitr::include_graphics("img/pipe.png")
 
 ``` 
@@ -574,7 +576,9 @@ countdown(minutes = 15, seconds = 00)
 
 class: inverse
 
-# Your turn 5: Getting YOUR data in  
+# Your turn 5: Lets get YOUR data in  
+
+<br>
 
 - Step 1: Upload your data into the data folder
 
@@ -600,20 +604,36 @@ countdown(minutes = 5, seconds = 00)
 
 ---
 
-# YAY! 
+# YAY your data is in R!
 
-## your data is in R, but its probably dirty. Maybe...
+.pull-left[
 
-### ... there are no variable names
-### ... the variable names are weird
-### ... there are empty rows/columns
-### ... you don't need all of those variables
-### ... you regret your choice of variable names
+## But its probably "dirty". 
 
+#### Maybe...
+
+#### ... there are no variable names
+#### ... the variable names are weird
+#### ... there are empty rows/columns
+#### ... you don't need all of those variables
+#### ... you regret your choice of variable names
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width= "600px"}
+knitr::include_graphics("img/dplyr_wrangling.png")
+
+``` 
+
+Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustrations) @allison_horst from R-Ladies Santa Barbara
+
+]
 
 ---
 
-# functions from the `janitor` package
+## clean_names() and friends from `janitor` 
 
 
 #### Problem 1: there are no variable names
@@ -622,21 +642,17 @@ countdown(minutes = 5, seconds = 00)
 betterdata <- yourdata %>%
                row_to_names()
 ```
-
 #### Problem 2: the variable names are weird
 
 ```
 betterdata <- yourdata %>%
                clean_names()
 ```
-
-
 #### Problem 3: there are empty rows/columns
 
 ```
 betterdata <- yourdata %>%
-               remove_empty(which = c("rows", "columns"))
-               
+  remove_empty(which = c("rows", "columns"))
 ```
 ---
 
@@ -658,7 +674,7 @@ betterdata <- yourdata %>%
 
 ---
 
-## functions from the `dplyr` package
+## select() and rename() from `dplyr`
 
 ### Problem 4: you don't need all of those variables
 
@@ -683,9 +699,9 @@ betterdata <- yourdata %>%
 ```
 ---
 
-# Problem 1-5 demo
+class: middle, center
 
-## My Favourite Things
+# My turn: Lets clean up the favourite things data
 
 
 ---
@@ -693,7 +709,7 @@ betterdata <- yourdata %>%
 
 class: inverse
 
-# Your turn... try solving problems 1-5
+# Your turn 6: Clean up your own data
 
 .pull-left[
 No variable names
@@ -737,12 +753,13 @@ betterdata <- yourdata %>%
   remove_empty(which = c("rows", "columns"))
                
 ```
-
 ```{r echo=FALSE}
-countdown(minutes = 20, seconds = 00)
+countdown(minutes = 15)
 ``` 
 
 ---
+
+class: center
 
 # What questions do you have ?
 
@@ -753,34 +770,199 @@ knitr::include_graphics("img/questions4.jpg")
 
 ---
 
-# It clean-er but is it tidy? 
+# Well done! Your data is clean-er, but is it "tidy"? 
 
-pivot_longer & pivot_wider
+## Three rules for tidy data:
 
+- Each variable must have its own column.
+- Each observation must have its own row.
+- Each value must have its own cell.
+
+```{r echo=FALSE, out.width= "700px"}
+knitr::include_graphics("img/tidy-1.png")
+
+``` 
+
+Image credit: [R4DS](https://r4ds.had.co.nz/tidy-data.html)
+
+
+<br> 
+<br> 
+<br> 
+
+Read more about tidy data [Wickham (2014)](https://www.jstatsoft.org/article/view/v059i10)
 
 ---
 
+# Wide to Long
 
-# Summary stats
+```{r echo=FALSE, out.width= "1000px"}
+knitr::include_graphics("img/wide_long.png")
+
+``` 
+
+---
+
+# pivot_longer() from `tidyr`
+
+### pivot_longer wants to know 3 things
+1. names_to = what you want to call the new column containing the names of the columns 
+2. values_to = what you want to call the new column containing the values 
+3. the range of columns that you want to make long (col1:col6)
+ 
+<br>
+
+```
+longdata <- wide %>% 
+            pivot_longer(names_to = "new_names_col", 
+                    values_to = "new_values_col", col1:col6)
+```
+---
+
+class: middle, center
+
+# My turn: Make favourite things long  
+
+---
+
+class: inverse
+
+# Your turn 7: make your wide data long
+
+Take a look at your data and work out ...
+
+1. which columns need to become long
+2. what the values column should be called
+3. what the "names" column should be called
+
+<br>
+
+```
+longdata <- wide %>% 
+      pivot_longer(names_to = "new_names_col", 
+                  values_to = "new_values_col", col1:col6)
+```
+
+```{r echo=FALSE}
+countdown(minutes = 15, seconds = 00)
+``` 
+
+---
+
+# Before we break... reminding you about a key idea 
+
+### The pipe %>% allows you to string together a series of functions and accomplish a LOT in just a few lines of code
+
+```
+ready_to_plot <- raw_data %>%
+  select(Just, The, Columns, You, Want) %>%
+  rename(just = Just, the = The, columns = Columns, you = You, want = Want) %>%
+  pivot_longer(names_to = "condition", values = "response", columns:want)
+  
+```
+---
+
+class: center, middle
+
+# Time for a break...
+
+### Next up.... summary stats & plotting
+
+```{r echo=FALSE}
+countdown(minutes = 10, seconds = 00)
+```
+
+---
+
+# Get a quick summary of...
+
+## ... the structure of your data
+
+```
+head(yourdata)
+
+str(yourdata)
+
+length(yourdata)
+
+glimpse(yourdata)
+
+names(yourdata)
+
+```
+---
+
+# Get some quick summary stats
+
+There are lots of ways to get summary stats in R. 
+
+.pull-left[
+
+#### base R
 
 ```
 summary(yourdata)
+
 ```
+#### `skimr` package
 
 ```
 skim(yourdata)
-```
 
 ```
-summarydf <- yourdata %>%
+
+]
+
+.pull-right[
+
+#### `dplyr` package 
+
+```
+summary_stats <- yourdata %>%
   group_by(something_interesting) %>%
   summarise(mean = mean(resp), 
             stdev = sd(resp), 
             n = n(), 
             se = stdev/sqrt(n))
+            
 ```
+]
+
 
 ---
+
+class: middle, center
+
+# My turn: summarise my favourite things 
+
+
+
+---
+
+class: inverse
+
+# Your turn 8: Get some summary stats from your data
+
+Try out summary() or skim(), or create a dataframe using this code template 
+
+```
+summary_stats <- yourdata %>%
+  group_by(something_interesting) %>%
+  summarise(mean = mean(resp), 
+            stdev = sd(resp), 
+            n = n(), 
+            se = stdev/sqrt(n))
+            
+```
+
+> Heads Up: do you need na.rm = TRUE?
+
+```{r echo=FALSE}
+countdown(minutes = 10, seconds = 00)
+``` 
+
+---
+
 class: center
 
 # What questions do you have ?
@@ -792,11 +974,133 @@ knitr::include_graphics("img/questions5.jpg")
 
 ---
 
-class: center, middle, inverse
+class: center, middle
 
-# Make a ggplot
+# We made it! Lets make a ggplot! 
+
+
+---
+
+# The grammar of graphics 
+
+### ggplot wants to know 3 things
+1. what data you want to plot
+2. the "aesthetics" i.e. which variables you want on the x and y, what things look like (colour/shape/fill)
+3. which "geom" you want to use (point, line, col, histogram, violin)
+
+```
+ggplot(data, aes(x = __, y = __)) +
+  geom_point()
+```
+#### WATCH OUT! You can pipe data into ggplot (and combine with dplyr functions) but within ggplot you need to ADD LAYERS with +
+
+
+
+```
+data %>%
+  filter(interesting_variable > z) %>%
+  ggplot(aes(x = __, y = __)) +
+  geom_point() 
+  
+  
+```
+---
+
+class: middle, center
+
+# My turn: plot favourite things
 
 ---
 
 
+class: inverse
 
+# Your turn 9: Plot your data
+
+.pull-left[
+```
+ggplot(data, aes(x = __, y = __)) +
+  geom_point()
+```
+
+```
+data %>%
+  filter(interesting_variable > z) %>%
+  ggplot(aes(x = __, y = __, colour = condition)) +
+  geom_point() +
+  facet_wrap(~ group)
+  
+  ggsave("your_first_ggplot.png")
+  
+```
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width= "400px"}
+knitr::include_graphics("img/ggplot2_masterpiece.png")
+
+``` 
+
+Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustrations) @allison_horst from R-Ladies Santa Barbara
+
+]
+
+```{r echo=FALSE}
+countdown(minutes = 10, seconds = 00)
+``` 
+
+---
+
+# Google: How to I add/get rid of  ______ ggplot in R?
+
+.pull-left[ 
+
+### 1. error bars
+### 2. axis labels
+### 3. a title
+### 4. legend
+### 5. colour ....
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width= "400px"}
+knitr::include_graphics("img/google_hadley.png")
+
+``` 
+
+]
+
+---
+
+## What next?
+
+#### 1. Unconf session tomorrow!! 
+Come and help us make a "walkthrough" for R beginners 
+
+#### 2. Check out [About](https://jenrichmond.github.io/AIMOSworkshop/about.html) 
+Lots of links to recommended learning resources
+
+#### 3. Find an [R-Ladies chapter](https://gqueiroz.shinyapps.io/rshinylady/) in your town 
+If there isn't an R-Ladies in your town, start one! Or join R-Ladies Remote community. 
+
+#### 4. Get on Twitter 
+Follow #rstats, try #TidyTuesday, join #r4ds Slack
+
+#### 5. Organise  a "ShutUpAndCode" group 
+Find people in your school who also want to learn; make new friends and make learning fun. 
+
+
+---
+
+class: centre
+
+# The End
+
+<iframe src="https://giphy.com/embed/xIJLgO6rizUJi" width="480" height="367" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/alice-in-wonderland-thank-you-xIJLgO6rizUJi">via GIPHY</a></p>
+
+
+---
