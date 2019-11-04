@@ -234,7 +234,7 @@ div.my-footer {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 20px;
+    height: 30px;
     width: 100%;
 }
 
@@ -251,7 +251,7 @@ div.my-footer span {
 
 
 .remark-slide-number {
-  font-size: 10pt;
+  font-size: 12 pt;
   margin-bottom: -11.6px;
   margin-right: 10px;
   color: #FFFFFF; /* white */

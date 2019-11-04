@@ -13,30 +13,6 @@ output: distill::distill_article
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-Lots of researchers who are interested in open science, replication, and reproducibility use R. But how did they learn it? Research methods courses are most often not taught in R.  If you are not terribly familiar with coding in general, teaching yourself how to code in R is a big task, and doing it by yourself is lonely and frustrating. 
 
-If you have been thinking of trying R but been scared of "writing code", this session is for you. Join folks from R-Ladies and start your journey towards reproducible analysis. You will learn how to find your way around RStudio, get your OWN data into R, clean it up a little, and generate some summary stats and plots. 
-
-
-
-
-Too long….
-
-Find your way around RStudio 
-Set up an R project and understand how to use the `here` package to avoid filepath drama
-Read your datafile into R, using functions from the `readr` and `datapasta` packages
-Learn how to clean with the `janitor` package 
-Convert your data from wide to long format and back again using functions from `tidyr`
-Get summary statistics using functions from `skimr` and `dplyr` 
-Plot your data using `ggplot` 
-
-But perhaps most importantly, we will show you how to find solutions to your R problems on the internet and how to recognise when your google search has found a solution. 
-
-This workshop will be a good fit for you if… 
-you’ve been to an R training and it all made sense at the time, but when you got back to your lab you couldn’t get R to read your data. 
-you’ve tried to learn R by yourself and quickly got overwhelmed 
-you’ve wanted to try R but not been sure where to start
-you are a bit scared of “writing code”
-
-
+Add links etc here
 

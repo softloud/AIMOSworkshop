@@ -3,7 +3,7 @@ title: "hackathon-cheatsheet"
 description: |
   Let's start at the very beginning...
 author:
-  - name: Jen Richmond
+  - name: Charles Gray & Jen Richmond
     url: https://example.com/norajones
     affiliation: UNSW Sydney
     affiliation_url: http://jenrichmond.rbind.io/post/
@@ -14,17 +14,44 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+# Collaborative document
+
+[Google document](https://docs.google.com/document/d/10cPvhgJT93lsRmel9A43qgdt30hxX6Xkq4e92MHqFT8/edit?usp=sharing) where we can all contribute to the manuscript.  
+
 # Develop a beginner friendly cheatsheet for R learners
 
-RStudio cheatsheets (https://rstudio.com/resources/cheatsheets/) are a great resource for R users. They provide a 1 page reference guide that summarises the main functions in a particular package and how to use them. But they are not very beginner friendly. Cheatsheets assume you have a solid grasp of how to refer to data, variables and parameters in R and can generalise from a sparse template to your own situation. They often only become useful when you already know how to use a package. In this hackathon, we will work together to create a “Getting started with the Tidyverse” cheatsheet, a resource designed specifically for R beginners. 
+
+[RStudio cheatsheets](https://rstudio.com/resources/cheatsheets/) are a great resource for R users. They provide a 1 page reference guide that summarises the main functions in a particular package and how to use them. But they are not very beginner friendly. Cheatsheets assume you have a solid grasp of how to refer to data, variables and parameters in R and can generalise from a sparse template to your own situation. They often only become useful when you already know how to use a package. In this hackathon, we will work together to create a “Getting started with the Tidyverse” cheatsheet, a resource designed specifically for R beginners. 
 
 We welcome an interest in contributing to at least one of the following, or proposing another working category: 
 
 - Visual design of the cheatsheet; 
 - Pedagogical values and objectives; 
 - Technical implementation in .Rmd;
-- Write-up of manuscript that describes and publishes the cheatsheet.
+- Write-up of [manuscript](https://docs.google.com/document/d/10cPvhgJT93lsRmel9A43qgdt30hxX6Xkq4e92MHqFT8/edit?usp=sharing) that describes and publishes the cheatsheet.
 
 Advanced knowledge of R is not required; merely an interest in the kind of problems you would like to use R to solve. Attendees of the associated workshop, Let’s start at the very beginning, are warmly invited to bring insights from their recent introduction to R, as there will be obstacles and smooth points in the learning process that are not as immediately apparent to those who have been using R for several years.  
 
-https://rstudio.com/resources/cheatsheets/how-to-contribute-a-cheatsheet/
+R-Studio provides a guide to [how to contribute a cheatsheet](https://rstudio.com/resources/cheatsheets/how-to-contribute-a-cheatsheet/
+), which provides an excellent starting point. 
+
+## A possible approach for the manuscript
+
+The intellectual rigour required to master a statistical computing task should not be underestimated. However, there is another consideration, that frequently proves to be more challenging to overcome. When we are tired, harried, or have several other things to do, if a task will require a significant investment of a cognitive energy, we may well leave that task for another day. 
+
+How do we take scientific workflows, which are so technical that many practicing scientists eschew them, and make them more accessible? How do we extract the bare minimum, the *boring* examples, for utility, while making the onboarding of a new method as much of a pleasure as possible?
+
+> Use the smallest, simplest, most built-in data possible. Think: iris or mtcars. **Bore me.** (Jenny Bryan in `reprex::` [dos and donts](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html))
+
+Our manuscript will present a *walkthrough for data analysis*, where *walkthrough* is a term we borrow from video gaming terminology to refer to a guide that enhances the player’s enjoyment of the game, in a way that is tailored to their expertise.   
+
+To optimise a walkthrough, we propose it must have both extrinsic and intrinsic incentives. In a research context, the extrinsic incentive is a given. We propose building a walkthrough with the objective of *meritget*. 
+
+
+![In the 2009 Nintendo hand=held DS game Scribblenauts, the player is informed of "merit get", when a trophy, "merit", is earned. (image source [wikipedia](https://upload.wikimedia.org/wikipedia/en/3/3a/Scribblenauts_cover.jpg?1572521817931))](https://upload.wikimedia.org/wikipedia/en/3/3a/Scribblenauts_cover.jpg?1572521817931)
+
+
+We informally define *meritget* to be the moment when you turn to the person beside you and high-five at an unconference such as AIMOS. A working formal definition of meritget is an intrinsic incentive that does not have extrinsic value but sparks joy in the user.  
+
+A possible line of discussion for the hackathon is a formal definition of *meritget* and specifically how we tried to achieve *meritget*  in our *walkthrough for data analysis*. 

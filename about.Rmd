@@ -8,6 +8,8 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+
+
 ## aimos
 
 [Association for Interdiscipliary Meta-research & Open Science](https://www.aimos2019conference.com/)
@@ -15,3 +17,26 @@ knitr::opts_chunk$set(echo = FALSE)
 ## r-ladies
 
 [R-Ladies](https://rladies.org/)
+
+
+# learning resources for beginners
+
+[R for Data Science](https://r4ds.had.co.nz/)
+
+A free online book (or you can buy a hard copy) by Hadley Wickham and Garrett Grolemund. Get started with the Tidyverse. 
+
+[Learning Statistics with R](https://learningstatisticswithr-bookdown.netlify.com/)
+
+Written by Dani Navarro for psych students, its funny and well written and recently converted by Emily Kothe into a bookdown site. 
+
+[RStudio Education](https://education.rstudio.com/)
+
+The new website from the RStudio Education team compiles links to resources for both learners and teachers. No matter where you are on your learning journey- you will find something useful here. 
+
+[RYouWithMe](https://rladiessydney.org/courses/ryouwithme/)
+
+Online modules by RLadies Sydney designed by beginners for beginners. Walk through Basic Basics, Clean it Up, VizWhiz and MarkyMark (aka RMarkdown). 
+
+[AwesomeR](https://awesome-r.com/#awesome-r-reproducible-research)
+
+Need to learn how to do X in R? You can try google or twitter, or check out the curated list of packages/tools at Awesome R. The list for [reproducible research](https://awesome-r.com/index.html#awesome-r-reproducible-research) is a good place to start. 
