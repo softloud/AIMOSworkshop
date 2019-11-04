@@ -1,0 +1,30 @@
+---
+title: "document map"
+description: |
+  Guide to documents associated with the onesheet.
+author:
+  - name: Charles T. Gray 
+    url: https://softloud.github.io/onetimetrophybitch/about.html
+    affiliation: R-Ladies
+    affiliation_url: https://rladies.org/
+  - name: Jen Richmond
+    url: http://jenrichmond.rbind.io/post/
+    affiliation: R-Ladies
+    affiliation_url: https://rladies.org/
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+document | description 
+- | --
+[manuscript](https://docs.google.com/document/d/10cPvhgJT93lsRmel9A43qgdt30hxX6Xkq4e92MHqFT8/edit?usp=sharing) | An in-browser editable collaborative document where  we can all contribute to and comment on the manuscript. 
+[github issue](https://github.com/jenrichmond/AIMOSworkshop/issues/12) | This is where to make comments about the walkthrough document itself. Documents associated with the development of the _walkthrough onesheet_ will be kept on this repository. Tagging your commits with `#12` will link.
+[github repository](https://github.com/jenrichmond/AIMOSworkshop) | Like fancy Dropbox with lots of project planning metatools to manage the documents associated with a project, such as a developing a _walkthrough onesheet_.
+
+
+

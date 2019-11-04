@@ -1,0 +1,35 @@
+---
+title: "walkthrough unconference"
+description: |
+  Let's start at the very beginning...
+author:
+  - name: Charles T. Gray 
+    url: https://softloud.github.io/onetimetrophybitch/about.html
+    affiliation: R-Ladies
+    affiliation_url: https://rladies.org/
+  - name: Jen Richmond
+    url: http://jenrichmond.rbind.io/post/
+    affiliation: R-Ladies
+    affiliation_url: https://rladies.org/
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# purpose of this unconf session
+
+[RStudio cheatsheets](https://rstudio.com/resources/cheatsheets/) are a great resource for R users. They provide a one-page reference guide that summarises the main functions in a particular package and how to use them. But they are not very beginner friendly. Cheatsheets assume you have a solid grasp of how to refer to data, variables and parameters in R and can generalise from a sparse template to your own situation. They often only become useful when you already know how to use a package. 
+
+In this hackathon, we will work together to create a _data analysis walkthrough onesheet_, a minimalistic resource designed specifically for R beginners, providing the bare bones of what is required. By keeping the walkthrough to a onesheet that can be printed, the user has the option of saving valuable screen space. 
+
+> Use the smallest, simplest, most built-in data possible. Think: iris or mtcars. **Bore me.** (Jenny Bryan in `reprex::` [dos and donts](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html))
+
+We will aim to instill in our walkthrough a sense of _meritget_, taking a potentially energy-draining technical task and aiming to make it as accessible and enjoyable as possible for the user. 
+
+Our working group has metascience goals in clarifying the definitions of _walkthrough_ and _meritget_, and delineating this in a manuscript about the data analysis walkthrough onesheet. 
+
+R-Studio provides a guide to [how to contribute a cheatsheet](https://rstudio.com/resources/cheatsheets/how-to-contribute-a-cheatsheet/
+), which provides an excellent starting point for discussion. 
+

@@ -11,7 +11,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-Welcome to the [R-Ladies](https://rladies.org/) AIMOS workshop for the 2019 [Association for Interdisciplinary Meta-research & Open Science](https://www.aimos2019conference.com/) meeting in Melbourne. 
+# AIMOSworkshop
 
+Welcome to the [R-Ladies](https://rladies.org/) AIMOS workshop for the 2019 [Association for Interdisciplinary Meta-research & Open Science](https://www.aimos2019conference.com/) meeting in Melbourne. 
 
 For more information, check out the [r-ladies aimos site](https://jenrichmond.github.io/AIMOSworkshop/).
