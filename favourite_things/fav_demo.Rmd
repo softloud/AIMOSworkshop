@@ -1,0 +1,138 @@
+---
+title: "fav things demo"
+author: "Jen Richmond"
+date: "05/11/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# My turn 1
+
+Read and clean fav things data
+
+# load packages
+
+```{r message=FALSE, warning=FALSE}
+library(janitor)
+library(tidyverse)
+library(here)
+library(skimr)
+```
+
+
+# read data
+
+```{r}
+fav_things <- read_csv(here("favourite_things", "fav_subset.csv"))
+```
+
+
+# clean names
+```{r}
+clean <- fav_things %>%
+  clean_names() %>%
+  rowid_to_column(var = "id") %>%
+  select(- timestamp)
+
+names(clean)
+```
+
+# rename
+```{r}
+renamed <- clean %>%
+  rename(raindrops = raindrops_on_roses, 
+         whiskers = whiskers_on_kittens, 
+         kettles = bright_copper_kettles, 
+         mittens = warm_woollen_mittens, 
+         packages = brown_paper_packages_tied_up_with_string, 
+         age = how_old_are_you, 
+         viewings = how_many_times_have_you_seen_the_sound_of_music)
+```
+
+# Check names
+```{r}
+names(renamed)
+```
+
+# My turn 2 make it long
+# make wide data long
+
+```{r}
+long <- renamed %>%
+  pivot_longer(cols = raindrops:packages, 
+               names_to = "things", values_to = "rating") 
+```
+
+# My turn 3- summarise fav things
+
+# look at the structure of the data
+
+```{r}
+head(long)
+
+str(long)
+
+glimpse(long)
+```
+
+
+
+# get summary stats
+
+```{r}
+summary(long)
+
+skim(long) 
+
+
+ratings_summary <- long %>%
+  group_by(things) %>%
+  summarise(mean = mean(rating, na.rm = TRUE), 
+            sd = sd(rating, na.rm = TRUE), 
+            n = n(), 
+            se = sd/sqrt(n)) 
+
+```
+
+# my turn 4: plot fav thigns
+# plot raw 
+
+```{r}
+long %>%
+  ggplot(aes(x = age, y = viewings)) +
+  geom_point() 
+```
+
+
+# plot summary - simple plot
+
+```{r}
+ratings_summary %>%
+  ggplot(aes(x = things, y = mean)) +
+  geom_col()
+```
+
+
+# summary - bells and whistles plot
+
+```{r}
+long$score <- as.factor(long$score) # make score a factor so the colours work
+
+ratings_summary %>%
+  ggplot(aes(x = things, y = mean, fill = things)) +
+  geom_col() +
+  geom_errorbar(aes(ymin= mean-se, ymax=mean+se),
+                size= 0.3,    # thinner lines
+                width= 0.2)  +  # skinnier bars 
+  theme_classic() +
+  theme(legend.position = "none") + #remove legend
+  scale_y_continuous(name = "mean rating", 
+                     expand = c(0, 0), # make the bars sit on x axis
+                     limits = c(0, 7), # extend y axis
+                     breaks=c(0, 1, 2, 3, 4, 5, 6, 7))  
+```
+
+

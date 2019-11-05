@@ -2,6 +2,7 @@ library(googledrive)
 library(googlesheets4)
 library(janitor)
 library(tidyverse)
+library(here)
 
 # get sheet from googledrive
 
@@ -23,6 +24,7 @@ write_csv(fav, here("favourite_things", "fav_all.csv"))
 
 ## write to csv 
 write_csv(fav5, here("favourite_things", "fav_subset.csv"))
+
 
 
           

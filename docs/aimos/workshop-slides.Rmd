@@ -17,7 +17,7 @@ output:
       countIncrementalSlides: true
       ratio: "16:9"
 params:
-  site_link: "https://do-re-mi.netlify.com/"
+  site_link: "https://tinyurl.com/aimos-workshop-slides"
 ---
 
 ```{r setup, include=FALSE}
@@ -222,15 +222,9 @@ class: inverse
 
 - Go to this link https://tinyurl.com/do-re-mi-aimos
 
-<br>
-
 - Sign up for an RStudio Cloud account
 
-<br>
-
 - Once at the Welcome screen, choose Projects, do-re-mi
-
-<br>
 
 - Let it deploy (it will chug a little bit)
 
@@ -548,7 +542,7 @@ df <- read_csv(here("data", "file.csv"))
 
 ```
 
-- Step 3: Adapt the template to read in the babynames data 
+- Step 3: Adapt the template to read in the SAbabynames.csv data 
 
 - Step 4: Play with the code in each chunk to plot...
 
@@ -1108,23 +1102,29 @@ Or check out the [R Graph Gallery](https://www.r-graph-gallery.com/index.html) f
 
 ---
 
-## What next?
+# What next?
 
-#### 1. Unconf session tomorrow!! 
+.pull-left[
+
+### 1. Unconf session tomorrow!! 
 Come and help us make a "walkthrough" for R beginners 
 
-#### 2. Check out [About](https://jenrichmond.github.io/AIMOSworkshop/about.html) 
-Lots of links to recommended learning resources
+### 2. Check out [About](https://jenrichmond.github.io/AIMOSworkshop/about.html) for links to learning resources
 
-#### 3. Find an [R-Ladies chapter](https://gqueiroz.shinyapps.io/rshinylady/) in your town 
+### 3. Find an [R-Ladies chapter](https://gqueiroz.shinyapps.io/rshinylady/)
 If there isn't an R-Ladies in your town, start one! Or join R-Ladies Remote community. 
 
-#### 4. Get on Twitter 
+]
+
+.pull-right[
+
+### 4. Get on Twitter 
 Follow #rstats, try #TidyTuesday, join #r4ds Slack
 
-#### 5. Organise  a "ShutUpAndCode" group 
+### 5. Organise  a "ShutUpAndCode" group 
 Find people in your school who also want to learn; make new friends and make learning fun. 
 
+]
 
 ---
 
