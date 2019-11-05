@@ -212,12 +212,38 @@ class: center, middle
 
 # Navigating RStudio
 
-insert link to RStudio Cloud session here
+https://tinyurl.com/do-re-mi-aimos
 
 ---
 
-Insert screenshot RStudio Cloud view
+class: inverse
 
+# Your turn 1: Set up RStudio Cloud
+
+- Go to this link https://tinyurl.com/do-re-mi-aimos
+
+<br>
+
+- Sign up for an RStudio Cloud account
+
+<br>
+
+- Once at the Welcome screen, choose Projects, do-re-mi
+
+<br>
+
+- Let it deploy (it will chug a little bit)
+
+<br>
+
+```{r echo=FALSE, out.width= "500px"}
+knitr::include_graphics("img/cloud.png")
+
+``` 
+
+```{r echo=FALSE}
+countdown(minutes = 3, seconds = 00)
+```
 
 ---
 
@@ -234,7 +260,7 @@ Image credit to Jessica Ward from @RLadiesNCL
 ---
 class: inverse 
 
-# Your turn 1: Let's start by redecorating
+# Your turn 2: Let's start by redecorating
 
 .pull-left[
 
@@ -352,7 +378,7 @@ It's a good idea to put `library(tidyverse)` at the top of every analysis docume
 
 class: inverse 
 
-# Your turn 2: Install some packages
+# Your turn 3: Install some packages
 
 Step 1. In your console, install...
 
@@ -365,7 +391,7 @@ Step 1. In your console, install...
 install.packages("packagename")
 ```
 
-Step 2. Then open the demo.Rmd file and add the following to the "code chunk" under `library(tidyverse)`. 
+Step 2. Then open the Rmd_demo_babynames.Rmd file and add the following to the "code chunk" under `library(tidyverse)`. 
 
 ```
 library(janitor) 
@@ -428,7 +454,7 @@ Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustration
 
 class: inverse
 
-# Your turn 3: "Knit" your RMarkdown document
+# Your turn 4: "Knit" your RMarkdown document
 
 .pull-left[
 
@@ -511,7 +537,7 @@ Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustration
 
 class: inverse
 
-# Your turn 4: Read in the babynames data
+# Your turn 5: Read in the babynames data
 
 - Step 1: Make a new chunk (Cmd-Option-I)
 
@@ -529,6 +555,8 @@ df <- read_csv(here("data", "file.csv"))
    - How popular is your name?
    - How popular is your name relative to your neighbours?
    - Has the popularity of your name changed since you were born?
+   
+   **don't forget to change r eval = TRUE on each chunk**
    
 - Step 5: Knit your document
    
@@ -576,26 +604,28 @@ countdown(minutes = 15, seconds = 00)
 
 class: inverse
 
-# Your turn 5: Lets get YOUR data in  
+# Your turn 6: Lets get YOUR data in  
 
 <br>
 
 - Step 1: Upload your data into the data folder
 
-- Step 2: Make a new chunk (Cmd-Option-I)
+- Step 2: Make a new RMarkdown document (File-NewFile-RMarkdown), save as my_analysis.Rmd
 
-- Step 3: Copy the template code
+- Step 3: Make a new chunk (Cmd-Option-I) and load packages using library() 
+
+- Step 4: Make another new chunk, copy the template code
 
 ```
 df <- read_csv(here("data", "file.csv"))
 
 ```
 
-- Step 3: Adapt the template to match your datafile
+- Step 5: Adapt the template to match your datafile
 
-- Step 4: Run the chunk to read your data in 
+- Step 6: Run the chunk to read your data in 
    
-- Step 5: Have a look at your data, any obvious problems?
+- Step 7: Have a look at your data, any obvious problems?
 
 ```{r echo=FALSE}
 countdown(minutes = 5, seconds = 00)
@@ -709,7 +739,7 @@ class: middle, center
 
 class: inverse
 
-# Your turn 6: Clean up your own data
+# Your turn 7: Clean up your own data
 
 .pull-left[
 No variable names
@@ -827,7 +857,7 @@ class: middle, center
 
 class: inverse
 
-# Your turn 7: make your wide data long
+# Your turn 8: make your wide data long
 
 Take a look at your data and work out ...
 
@@ -941,7 +971,7 @@ class: middle, center
 
 class: inverse
 
-# Your turn 8: Get some summary stats from your data
+# Your turn 9: Get some summary stats from your data
 
 Try out summary() or skim(), or create a dataframe using this code template 
 
@@ -1015,7 +1045,7 @@ class: middle, center
 
 class: inverse
 
-# Your turn 9: Plot your data
+# Your turn 10: Plot your data
 
 .pull-left[
 ```
@@ -1053,7 +1083,7 @@ countdown(minutes = 10, seconds = 00)
 
 ---
 
-# Google: How to I add/get rid of  ______ ggplot in R?
+# Google: How to I add/get rid of  ________ ggplot in R?
 
 .pull-left[ 
 
@@ -1073,6 +1103,8 @@ knitr::include_graphics("img/google_hadley.png")
 ``` 
 
 ]
+
+Or check out the [R Graph Gallery](https://www.r-graph-gallery.com/index.html) for inspiration and code
 
 ---
 
