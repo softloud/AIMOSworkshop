@@ -23,10 +23,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 We welcome an interest in contributing to at least one of the following, or proposing another working category: 
 
-- Visual design of the cheatsheet; 
+- Visual design of the cheatsheet. Curiously, the cheatsheet templates in rstudio are in ppt or keynote. Do we develop the cheatsheet with design of expediency in mind? Do we create a walkthrough that works in a `posterdown::` template as the first draft? So, we design as one workflow.;  
 - Pedagogical values and objectives; 
 - Technical implementation in .Rmd;
 - Write-up of [manuscript](https://docs.google.com/document/d/10cPvhgJT93lsRmel9A43qgdt30hxX6Xkq4e92MHqFT8/edit?usp=sharing) that describes and publishes the cheatsheet.
+
+## visual design
 
 # skills required for participation
 

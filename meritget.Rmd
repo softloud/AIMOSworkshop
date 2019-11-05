@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-To optimise a walkthrough, we propose it must have both extrinsic and intrinsic incentives. In a research context, the extrinsic incentive is a given. We propose building a walkthrough with the objective of *meritget*. 
+We wish to optimise our walkthrough for enjoyment and utility. We choose the term walkthrough for its roots in video gaming, where it describes a helper system designed to optimise the gaming experience of a certain player typ or level . We propose a walkthrough have both extrinsic and intrinsic incentives. In a research context, the extrinsic incentive is a given. We propose building a walkthrough with the objective of *meritget*. 
 
 ![In the 2009 Nintendo hand=held DS game Scribblenauts, the player is informed of "merit get", when a trophy, "merit", is earned. (image source [wikipedia](https://upload.wikimedia.org/wikipedia/en/3/3a/Scribblenauts_cover.jpg?1572521817931))](https://upload.wikimedia.org/wikipedia/en/3/3a/Scribblenauts_cover.jpg?1572521817931)
 
@@ -28,3 +28,20 @@ To optimise a walkthrough, we propose it must have both extrinsic and intrinsic 
 We informally define *meritget* to be the moment when you turn to the person beside you and high-five at an unconference such as AIMOS. A working formal definition of meritget is an intrinsic incentive that does not have extrinsic value but sparks joy in the user.  
 
 A possible line of discussion for the hackathon is a formal definition of *meritget* and specifically how we tried to achieve *meritget*  in our *walkthrough for data analysis*. 
+
+## meritget gallery
+
+We asked around ahead of aimos what people think of as their personal meritgets in their own data science workflow. Here are some of the responses:
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">Still not 100% sure I understand the definition. But I think for me it was when I made it so all the programs I use automatically open on different workspaces in the setup I use for working. Also, linking GitHub issues to GitHub comments and commits makes me unreasonably happy 😀</p>&mdash; Steffi LaZerte (@steffilazerte) <a href="https://twitter.com/steffilazerte/status/1191004141461442562?ref_src=twsrc%5Etfw">November 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">I 💖💖💖 the new windows terminal! I use it and <a href="https://twitter.com/hashtag/CascadiaCode?src=hash&amp;ref_src=twsrc%5Etfw">#CascadiaCode</a> everywhere 😍 Fab work by <a href="https://twitter.com/cinnamon_msft?ref_src=twsrc%5Etfw">@cinnamon_msft</a> and her team 💗 <a href="https://t.co/inuv3ZLiIr">pic.twitter.com/inuv3ZLiIr</a></p>&mdash; Dr. Sarah Kaiser 🔜 #HackadaySupercon (@crazy4pi314) <a href="https://twitter.com/crazy4pi314/status/1191181277132664832?ref_src=twsrc%5Etfw">November 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">In Rconsole (on windows)<br><br>background = grey15 <br>normaltext = cornsilk <a href="https://t.co/uAgE2OfUxu">pic.twitter.com/uAgE2OfUxu</a></p>&mdash; Michael Sumner (@mdsumner) <a href="https://twitter.com/mdsumner/status/1191198070333009920?ref_src=twsrc%5Etfw">November 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">I think that connecting RStudio to Git counts as a meritget ☺️ <br><br>I got it done swiftly (thanks, once more, to Happy Git with R) last Thursday for my newish lapblet (laptop/tablet)</p>&mdash; Laura Ación (@_lacion_) <a href="https://twitter.com/_lacion_/status/1190976707827777537?ref_src=twsrc%5Etfw">November 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">Also, since I use R on Windows and sometimes don&#39;t want to go as far as opening up RStudio (but also don&#39;t want to have to deal with silly things like no arrow keys), I&#39;ve been really happy with Radian <a href="https://t.co/1KSYOX1ZYV">https://t.co/1KSYOX1ZYV</a> <a href="https://t.co/DgNecj4JR8">pic.twitter.com/DgNecj4JR8</a></p>&mdash; James Goldie (@rensa_co) <a href="https://twitter.com/rensa_co/status/1191134624144998400?ref_src=twsrc%5Etfw">November 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+
