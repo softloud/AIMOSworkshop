@@ -14,7 +14,16 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Today we will use RStudio Cloud. Use [this link](https://tinyurl.com/do-re-mi-aimos) to access our shared workspace. 
+Today we will use RStudio Cloud. Use [this link](https://tinyurl.com/do-re-mi-aimos) to access our shared workspace. You can access the slides [here](https://jenrichmond.github.io/AIMOSworkshop/aimos/workshop-slides.html#1)
 
-You can access the slides at [here](https://jenrichmond.github.io/AIMOSworkshop/aimos/workshop-slides.html#1)
+insert timeline
+
+
+
+```{r echo=FALSE, out.width= "600px"}
+knitr::include_graphics("aimos/img/r_first_then.png")
+
+``` 
+
+Image credit: [Allison Horst](https://github.com/allisonhorst/stats-illustrations) @allison_horst from R-Ladies Santa Barbara
 
