@@ -1,0 +1,426 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={fav things demo},
+            pdfauthor={Jen Richmond},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{fav things demo}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Jen Richmond}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{05/11/2019}
+
+
+\begin{document}
+\maketitle
+
+\hypertarget{my-turn-1}{%
+\section{My turn 1}\label{my-turn-1}}
+
+Read and clean fav things data
+
+\hypertarget{load-packages}{%
+\section{load packages}\label{load-packages}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(janitor)}
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\KeywordTok{library}\NormalTok{(here)}
+\KeywordTok{library}\NormalTok{(skimr)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read-data}{%
+\section{read data}\label{read-data}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fav_things <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\KeywordTok{here}\NormalTok{(}\StringTok{"favourite_things"}\NormalTok{, }\StringTok{"fav_subset.csv"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Parsed with column specification:
+## cols(
+##   Timestamp = col_datetime(format = ""),
+##   `Raindrops on roses` = col_double(),
+##   `Whiskers on kittens` = col_double(),
+##   `Bright copper kettles` = col_double(),
+##   `Warm woollen mittens` = col_double(),
+##   `Brown paper packages tied up with string` = col_double(),
+##   `How old are you?` = col_double(),
+##   `How many times have you seen The Sound of Music?` = col_double(),
+##   Score = col_double()
+## )
+\end{verbatim}
+
+\hypertarget{clean-names}{%
+\section{clean names}\label{clean-names}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{clean <-}\StringTok{ }\NormalTok{fav_things }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{clean_names}\NormalTok{() }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{rowid_to_column}\NormalTok{(}\DataTypeTok{var =} \StringTok{"id"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(}\OperatorTok{-}\StringTok{ }\NormalTok{timestamp)}
+
+\KeywordTok{names}\NormalTok{(clean)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "id"                                             
+## [2] "raindrops_on_roses"                             
+## [3] "whiskers_on_kittens"                            
+## [4] "bright_copper_kettles"                          
+## [5] "warm_woollen_mittens"                           
+## [6] "brown_paper_packages_tied_up_with_string"       
+## [7] "how_old_are_you"                                
+## [8] "how_many_times_have_you_seen_the_sound_of_music"
+## [9] "score"
+\end{verbatim}
+
+\hypertarget{rename}{%
+\section{rename}\label{rename}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{renamed <-}\StringTok{ }\NormalTok{clean }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{rename}\NormalTok{(}\DataTypeTok{raindrops =}\NormalTok{ raindrops_on_roses, }
+         \DataTypeTok{whiskers =}\NormalTok{ whiskers_on_kittens, }
+         \DataTypeTok{kettles =}\NormalTok{ bright_copper_kettles, }
+         \DataTypeTok{mittens =}\NormalTok{ warm_woollen_mittens, }
+         \DataTypeTok{packages =}\NormalTok{ brown_paper_packages_tied_up_with_string, }
+         \DataTypeTok{age =}\NormalTok{ how_old_are_you, }
+         \DataTypeTok{viewings =}\NormalTok{ how_many_times_have_you_seen_the_sound_of_music)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{check-names}{%
+\section{Check names}\label{check-names}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(renamed)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "id"        "raindrops" "whiskers"  "kettles"   "mittens"   "packages" 
+## [7] "age"       "viewings"  "score"
+\end{verbatim}
+
+\hypertarget{my-turn-2-make-it-long}{%
+\section{My turn 2 make it long}\label{my-turn-2-make-it-long}}
+
+\hypertarget{make-wide-data-long}{%
+\section{make wide data long}\label{make-wide-data-long}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{long <-}\StringTok{ }\NormalTok{renamed }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{pivot_longer}\NormalTok{(}\DataTypeTok{cols =}\NormalTok{ raindrops}\OperatorTok{:}\NormalTok{packages, }
+               \DataTypeTok{names_to =} \StringTok{"things"}\NormalTok{, }\DataTypeTok{values_to =} \StringTok{"rating"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{my-turn-3--summarise-fav-things}{%
+\section{My turn 3- summarise fav
+things}\label{my-turn-3--summarise-fav-things}}
+
+\hypertarget{look-at-the-structure-of-the-data}{%
+\section{look at the structure of the
+data}\label{look-at-the-structure-of-the-data}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(long)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 6
+##      id   age viewings score things    rating
+##   <int> <dbl>    <dbl> <dbl> <chr>      <dbl>
+## 1     1    42       17     5 raindrops      5
+## 2     1    42       17     5 whiskers       3
+## 3     1    42       17     5 kettles        4
+## 4     1    42       17     5 mittens        2
+## 5     1    42       17     5 packages       4
+## 6     2    32        2     4 raindrops      6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{str}\NormalTok{(long)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Classes 'tbl_df', 'tbl' and 'data.frame':    495 obs. of  6 variables:
+##  $ id      : int  1 1 1 1 1 2 2 2 2 2 ...
+##  $ age     : num  42 42 42 42 42 32 32 32 32 32 ...
+##  $ viewings: num  17 17 17 17 17 2 2 2 2 2 ...
+##  $ score   : num  5 5 5 5 5 4 4 4 4 4 ...
+##  $ things  : chr  "raindrops" "whiskers" "kettles" "mittens" ...
+##  $ rating  : num  5 3 4 2 4 6 6 4 4 4 ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{glimpse}\NormalTok{(long)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Observations: 495
+## Variables: 6
+## $ id       <int> 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4,...
+## $ age      <dbl> 42, 42, 42, 42, 42, 32, 32, 32, 32, 32, 31, 31, 31, 3...
+## $ viewings <dbl> 17, 17, 17, 17, 17, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 1, ...
+## $ score    <dbl> 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 3, 3, 3,...
+## $ things   <chr> "raindrops", "whiskers", "kettles", "mittens", "packa...
+## $ rating   <dbl> 5, 3, 4, 2, 4, 6, 6, 4, 4, 4, 4, 7, 6, 3, 1, 5, 7, 3,...
+\end{verbatim}
+
+\hypertarget{get-summary-stats}{%
+\section{get summary stats}\label{get-summary-stats}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(long)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        id          age           viewings           score     
+##  Min.   : 1   Min.   : 5.00   Min.   :  0.000   Min.   :0.00  
+##  1st Qu.:25   1st Qu.:34.00   1st Qu.:  2.000   1st Qu.:2.00  
+##  Median :50   Median :40.00   Median :  4.000   Median :3.00  
+##  Mean   :50   Mean   :37.98   Mean   :  9.576   Mean   :2.99  
+##  3rd Qu.:75   3rd Qu.:44.00   3rd Qu.: 10.000   3rd Qu.:4.00  
+##  Max.   :99   Max.   :67.00   Max.   :150.000   Max.   :5.00  
+##               NA's   :5                                       
+##     things              rating     
+##  Length:495         Min.   :1.000  
+##  Class :character   1st Qu.:4.000  
+##  Mode  :character   Median :5.000  
+##                     Mean   :4.897  
+##                     3rd Qu.:7.000  
+##                     Max.   :7.000  
+##                     NA's   :2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{skim}\NormalTok{(long) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Skim summary statistics
+##  n obs: 495 
+##  n variables: 6 
+## 
+## -- Variable type:character ---------------------------
+##  variable missing complete   n min max empty n_unique
+##    things       0      495 495   7   9     0        5
+## 
+## -- Variable type:integer -----------------------------
+##  variable missing complete   n mean    sd p0 p25 p50 p75 p100     hist
+##        id       0      495 495   50 28.61  1  25  50  75   99 ▇▇▇▇▇▇▇▇
+## 
+## -- Variable type:numeric -----------------------------
+##  variable missing complete   n  mean    sd p0 p25 p50 p75 p100     hist
+##       age       5      490 495 37.98 12.64  5  34  40  44   67 ▁▁▂▂▇▃▁▁
+##    rating       2      493 495  4.9   1.83  1   4   5   7    7 ▂▂▃▃▁▇▆▇
+##     score       0      495 495  2.99  1.29  0   2   3   4    5 ▁▃▁▅▇▁▃▃
+##  viewings       0      495 495  9.58 18.06  0   2   4  10  150 ▇▁▁▁▁▁▁▁
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ratings_summary <-}\StringTok{ }\NormalTok{long }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(things) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{mean =} \KeywordTok{mean}\NormalTok{(rating, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{), }
+            \DataTypeTok{sd =} \KeywordTok{sd}\NormalTok{(rating, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{), }
+            \DataTypeTok{n =} \KeywordTok{n}\NormalTok{(), }
+            \DataTypeTok{se =}\NormalTok{ sd}\OperatorTok{/}\KeywordTok{sqrt}\NormalTok{(n)) }
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{my-turn-4-plot-fav-things}{%
+\section{My turn 4: plot fav things}\label{my-turn-4-plot-fav-things}}
+
+\hypertarget{plot-raw-points}{%
+\section{plot raw points}\label{plot-raw-points}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{long }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ age, }\DataTypeTok{y =}\NormalTok{ viewings)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Removed 5 rows containing missing values (geom_point).
+\end{verbatim}
+
+\includegraphics{fav_demo_files/figure-latex/unnamed-chunk-9-1.pdf}
+
+\hypertarget{plot-summary---simple-plot}{%
+\section{plot summary - simple plot}\label{plot-summary---simple-plot}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ratings_summary }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ things, }\DataTypeTok{y =}\NormalTok{ mean)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{fav_demo_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+\hypertarget{plot-summary---bells-and-whistles-plot}{%
+\section{plot summary - bells and whistles
+plot}\label{plot-summary---bells-and-whistles-plot}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{long}\OperatorTok{$}\NormalTok{score <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(long}\OperatorTok{$}\NormalTok{score) }\CommentTok{# make score a factor so the colours work}
+
+\NormalTok{ratings_summary }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ things, }\DataTypeTok{y =}\NormalTok{ mean, }\DataTypeTok{fill =}\NormalTok{ things)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_col}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_errorbar}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{ymin=}\NormalTok{ mean}\OperatorTok{-}\NormalTok{se, }\DataTypeTok{ymax=}\NormalTok{mean}\OperatorTok{+}\NormalTok{se),}
+                \DataTypeTok{size=} \FloatTok{0.3}\NormalTok{,    }\CommentTok{# thinner lines}
+                \DataTypeTok{width=} \FloatTok{0.2}\NormalTok{)  }\OperatorTok{+}\StringTok{  }\CommentTok{# skinnier bars }
+\StringTok{  }\KeywordTok{theme_classic}\NormalTok{() }\OperatorTok{+}\StringTok{ }\CommentTok{# white background APA style}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position =} \StringTok{"none"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\CommentTok{#remove legend}
+\StringTok{  }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{name =} \StringTok{"mean rating"}\NormalTok{, }
+                     \DataTypeTok{expand =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{), }\CommentTok{# make the bars sit on x axis}
+                     \DataTypeTok{limits =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{7}\NormalTok{), }\CommentTok{# extend y axis}
+                     \DataTypeTok{breaks=}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{))  }\CommentTok{# make the ticks 1}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{fav_demo_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+
+\end{document}

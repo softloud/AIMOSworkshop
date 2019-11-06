@@ -33,6 +33,10 @@ If you have been thinking of trying R but been scared of "writing code", this se
 
 But perhaps most importantly, we will show you how to use google to find solutions to your R problems and how to recognise when your google search has found a solution. 
 
+### This is a BYO data session. 
+
+Bring a datafile (preferably in .csv format but .sav, .xls, .sas are also fine) that you would like to work with in R. 
+
 ### This workshop will be a good fit for you if… 
 
 - you’ve been to an R training and it all made sense at the time, but when you got back to your lab you couldn’t get R to read your data. 
@@ -41,7 +45,5 @@ But perhaps most importantly, we will show you how to use google to find solutio
 - you are a bit scared of “writing code”
 
 
-### This is a BYO data session. 
 
-Bring a datafile (preferably in .csv format but .sav, .xls, .sas are also fine) that you would like to work with in R. 
 

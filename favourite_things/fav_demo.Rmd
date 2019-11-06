@@ -2,7 +2,9 @@
 title: "fav things demo"
 author: "Jen Richmond"
 date: "05/11/2019"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -97,8 +99,9 @@ ratings_summary <- long %>%
 
 ```
 
-# my turn 4: plot fav thigns
-# plot raw 
+# My turn 4: plot fav things
+
+# plot raw points
 
 ```{r}
 long %>%
@@ -116,7 +119,7 @@ ratings_summary %>%
 ```
 
 
-# summary - bells and whistles plot
+# plot summary - bells and whistles plot
 
 ```{r}
 long$score <- as.factor(long$score) # make score a factor so the colours work
@@ -127,12 +130,12 @@ ratings_summary %>%
   geom_errorbar(aes(ymin= mean-se, ymax=mean+se),
                 size= 0.3,    # thinner lines
                 width= 0.2)  +  # skinnier bars 
-  theme_classic() +
+  theme_classic() + # white background APA style
   theme(legend.position = "none") + #remove legend
   scale_y_continuous(name = "mean rating", 
                      expand = c(0, 0), # make the bars sit on x axis
                      limits = c(0, 7), # extend y axis
-                     breaks=c(0, 1, 2, 3, 4, 5, 6, 7))  
+                     breaks=c(0, 1, 2, 3, 4, 5, 6, 7))  # make the ticks 1
 ```
 
 

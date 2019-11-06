@@ -9,16 +9,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-
-## aimos
-
-[Association for Interdiscipliary Meta-research & Open Science](https://www.aimos2019conference.com/)
-
-## r-ladies
-
-[R-Ladies](https://rladies.org/)
-
-
 # learning resources for beginners
 
 [R for Data Science](https://r4ds.had.co.nz/)
@@ -40,3 +30,12 @@ Online modules by RLadies Sydney designed by beginners for beginners. Walk throu
 [AwesomeR](https://awesome-r.com/#awesome-r-reproducible-research)
 
 Need to learn how to do X in R? You can try google or twitter, or check out the curated list of packages/tools at Awesome R. The list for [reproducible research](https://awesome-r.com/index.html#awesome-r-reproducible-research) is a good place to start. 
+
+
+## aimos
+
+[Association for Interdiscipliary Meta-research & Open Science](https://www.aimos2019conference.com/)
+
+## r-ladies
+
+[R-Ladies](https://rladies.org/)
