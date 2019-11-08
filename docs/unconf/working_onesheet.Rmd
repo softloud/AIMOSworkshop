@@ -1,0 +1,46 @@
+---
+title: "working onesheet"
+author: "AIMOS RLadies unconf contributors"
+date: "08/11/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Working onesheet
+
+
+## devops (aka the prep work)
+
+- RStudio Cloud or install
+
+
+## getting data in
+
+- `here`
+
+## wrangling
+
+- `janitor`
+
+## summarising
+
+- `skimr`
+
+## visualisation
+
+- grammar of graphics `ggplot`
+
+## tips and tricks
+
+- hotkeys
+
+
+## good practice
+
+- projects
+- file structures
+- version control
